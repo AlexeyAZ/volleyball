@@ -1,0 +1,77 @@
+.main-news {
+	font-size: 17px;
+
+	&__head {
+		background-color: $blue-main;
+		padding: 3px 0;
+	}
+
+	&__body {
+		background-color: $gray-main;
+		color: white;
+	}
+
+	&__content {
+		display: flex;
+		height: $main-news-content-height;
+	}
+
+	&__list {
+		flex-shrink: 0;
+		overflow: auto;
+		padding: 12px 0;
+		position: relative;
+		height: 100%;
+		width: $main-new-list-width;
+	}
+
+	&__table {
+		width: 100%;
+	}
+
+	&__table-col {
+		padding-top: 6px;
+		padding-bottom: 6px;
+		
+		&_time {
+			font-size: 10px;
+			padding-left: $container-inner-side-padding-pc;
+			width: 1%;
+		}
+
+		&_event {
+			font-size: 14px;
+			padding-left: 8px;
+		}
+	}
+
+	&__table-link {
+		color: white;
+	}
+
+	&__gallery {
+		flex-shrink: 1;
+		position: relative;
+		width: calc(100% - #{$main-new-list-width});
+	}
+
+	&__gallery-info {
+		background-color: rgba(0,0,0,0.5);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 1;
+	}
+
+	&__gallery-img {
+		background-image: url("../img/news-img.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: calc(#{$container-max-width} - #{$main-new-list-width} - #{$container-side-padding-pc} + (100vw - #{$container-max-width}) / 2);
+	}
+}

@@ -1,0 +1,50 @@
+- var headerActionsList = ["home", "system", "mail"];
+- var headerSocialList = ["rss", "fb", "tw"];
+- var headerNavList = ["О федерации", "Новости", "Сборные", "Волейбол", "Пляжный волейбол", "Видео", "Медиа", "Спонсоры"];
+- var headerNavOptions = ["Российские соревнования", "Международные соревнования", "Игроки (индивидуальный рейтинг на 29.09.14)", "Клубы", "Судьи", "Переходы", "Чемпионат Студенческой Волейбольной Лиги России", "Документы"];
+- var headerNavSubOptions = ["2014 год", "2013 год", "2012 год", "2011 год"];
+
+header.header
+	div.container.header__container
+		div.header__item.header__item_left
+			img(src="img/header-logo.png", alt="Всероссийская федерация воллейбола").header__logo
+		div.header__item.header__item_right
+			div.header__search
+				form.header__search-form
+					div.header__search-field
+						input(type="text" placeholder="Поиск по сайту").header__search-input
+						button.header__search-btn
+							svg.header__search-img
+								use(xlink:href="#header-search-icon")
+			div.header__actions
+				div.header__settings
+					ul.header__actions-list
+						each item in headerActionsList
+							li.header__actions-item
+								a(href="").header__actions-link
+									img(src="img/header-" + item + "-icon.png", alt="").header__actions-img
+				div.header__social
+					ul.header__social-list
+						each item in headerSocialList
+							li.header__social-item
+								a(href="").header__social-link
+									svg.header__social-img
+										use(xlink:href="#header-" + item + "-icon")
+	div.header__nav-wrap
+		div.container.header__nav-container
+			nav.header__nav
+				ul.header__nav-list
+					each item, index in headerNavList
+						li.header__nav-item
+							a(href="").header__nav-link.
+								#{item}
+							ul.header__nav-options.header__nav-options_level1
+								each item in headerNavOptions
+									li.header__nav-options-item
+										a(href="").header__nav-options-link.
+											#{item}
+										ul.header__nav-options.header__nav-options_level2
+											each item in headerNavSubOptions
+												li.header__nav-options-item
+													a(href="").header__nav-options-link.
+														#{item}

@@ -1,0 +1,26 @@
+.nav-block {
+	color: white;
+
+	&__head {
+
+		&_blue {
+			background-color: $blue-main;
+		}
+
+		&_red {
+			background-color: $red-main;
+		}
+	}
+
+	&__current {
+		display: inline-block;
+	}
+
+	&__arrow {
+		margin: 0 8px;
+	}
+
+	&__link {
+		color: white;
+	}
+}

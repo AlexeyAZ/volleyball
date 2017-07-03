@@ -1,0 +1,33 @@
+section.main-news
+	div.main-news__head
+		div.container
+			div.container__inner
+				div.nav-block
+					div.nav-block__head
+						div.nav-block__current.
+							В центре внимания
+						img(src="img/nav-block-arrow.png", alt="").nav-block__arrow
+						a(href="").nav-block__link.
+							Все новости
+	div.main-news__body
+		div.container
+			div.main-news__content
+				div.main-news__list
+					table.main-news__table
+						- for (var i = 1; i < 20; i++) {
+							tr.main-news__table-row
+								td.main-news__table-col.main-news__table-col_time.
+									0#{i}.03.2014
+								td.main-news__table-col.main-news__table-col_event
+									a(href="").main-news__table-link.
+										Кавалеры орденов
+						-}
+				div.main-news__gallery
+					div.main-news__gallery-info
+						p.main-news__gallery-info-title.
+							Кто будет спонсором
+						p.main-news__gallery-info-time.
+							04.03.2014
+						p.main-news__gallery-info-text.
+							Всероссийская федерация волейбола проводит конкурс на звание титульного спонсора Матча Звезд2013 мужского Чемпионата России.
+					div.main-news__gallery-img
