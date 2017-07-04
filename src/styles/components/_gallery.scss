@@ -1,0 +1,19 @@
+.gallery {
+
+    &__block {
+        padding: 0 30px;
+    }
+
+    &__imgs {
+
+    }
+
+    &__item {
+        padding: 10px;
+    }
+
+    &__img {
+        background-color: $blue-main;
+        height: 100px;
+    }
+}

@@ -1,0 +1,9 @@
+section.gallery
+    div.container
+        div.gallery__block
+            div.gallery__imgs.js-gallery-imgs
+                - for(var i = 0; i < 10; i ++) {
+                    div.gallery__item
+                        div.gallery__img.
+                            #{i}
+                - }

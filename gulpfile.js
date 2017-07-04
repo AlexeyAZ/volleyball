@@ -8,9 +8,13 @@ const properties = {
 const plugins = {
     js: [
         'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js',
+        'bower_components/slick-carousel/slick/slick.min.js',
     ],
     css: [
         'bower_components/reset-css/reset.css',
+        'bower_components/slick-carousel/slick/slick.css',
+        'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css',
     ]
 }
 

@@ -1,4 +1,5 @@
 .main-news {
+	overflow: hidden;
 	font-size: 17px;
 
 	&__head {
@@ -57,21 +58,67 @@
 
 	&__gallery-info {
 		background-color: rgba(0,0,0,0.5);
+		padding: 10px 10px 2em 20px;
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		z-index: 1;
+
+		&:after {
+			content: "";
+			background-color: rgba(0,0,0,0.5);
+			position: absolute;
+			left: 100%;
+			top: 0;
+			height: 100%;
+			width: 50vw;
+		}
 	}
 
-	&__gallery-img {
-		background-image: url("../img/news-img.jpg");
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+	&__gallery-info-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		left: 0;
+		width: 100%;
+	}
+
+	&__gallery-nav-block {
+
+	}
+
+	&__gallery-container {
 		position: absolute;
 		top: 0;
 		left: 0;
 		height: 100%;
 		width: calc(#{$container-max-width} - #{$main-new-list-width} - #{$container-side-padding-pc} + (100vw - #{$container-max-width}) / 2);
 	}
+
+	&__gallery-item {
+		background-image: url("../img/news-img.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__bottom-line {
+		background-color: $blue-main;
+		height: 1.8em;
+	}
+}
+
+.slick-list {
+	height: 100%;
+}
+
+.slick-track {
+	height: 100%;
+}
+
+.slick-dots {
+	display: flex;
 }

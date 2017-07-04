@@ -1,30 +1,30 @@
 @font-face {
-  font-family: "RobotoRegular";
-  src: url("../fonts/Roboto/roboto-regular.eot");
-  src: url("../fonts/Roboto/roboto-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-regular.woff2") format("woff2"), url("../fonts/Roboto/roboto-regular.woff") format("woff"), url("../fonts/Roboto/roboto-regular.ttf") format("truetype"), url("../fonts/Roboto/roboto-regular.svg#svgFontName") format("svg");
+  font-family: "Circe";
+  src: url("../fonts/Circe/Circe-Regular.eot");
+  src: url("../fonts/Circe/Circe-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Circe/Circe-Regular.woff2") format("woff2"), url("../fonts/Circe/Circe-Regular.woff") format("woff"), url("../fonts/Circe/Circe-Regular.ttf") format("truetype"), url("../fonts/Circe/Circe-Regular.svg#svgFontName") format("svg");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  font-family: "RobotoMedium";
-  src: url("../fonts/Roboto/roboto-medium.eot");
-  src: url("../fonts/Roboto/roboto-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-medium.woff2") format("woff2"), url("../fonts/Roboto/roboto-medium.woff") format("woff"), url("../fonts/Roboto/roboto-medium.ttf") format("truetype"), url("../fonts/Roboto/roboto-medium.svg#svgFontName") format("svg");
+  font-family: "Circe";
+  src: url("../fonts/Circe/Circe-Bold.eot");
+  src: url("../fonts/Circe/Circe-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Circe/Circe-Bold.woff2") format("woff2"), url("../fonts/Circe/Circe-Bold.woff") format("woff"), url("../fonts/Circe/Circe-Bold.ttf") format("truetype"), url("../fonts/Circe/Circe-Bold.svg#svgFontName") format("svg");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: bold; }
 
 @font-face {
-  font-family: "RobotoLight";
-  src: url("../fonts/Roboto/roboto-light.eot");
-  src: url("../fonts/Roboto/roboto-light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-light.woff2") format("woff2"), url("../fonts/Roboto/roboto-light.woff") format("woff"), url("../fonts/Roboto/roboto-light.ttf") format("truetype"), url("../fonts/Roboto/roboto-light.svg#svgFontName") format("svg");
+  font-family: "Circe";
+  src: url("../fonts/Circe/Circe-Light.eot");
+  src: url("../fonts/Circe/Circe-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Circe/Circe-Light.woff2") format("woff2"), url("../fonts/Circe/Circe-Light.woff") format("woff"), url("../fonts/Circe/Circe-Light.ttf") format("truetype"), url("../fonts/Circe/Circe-Light.svg#svgFontName") format("svg");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: 300; }
 
 @font-face {
-  font-family: "RobotoBold";
-  src: url("../fonts/Roboto/roboto-bold.eot");
-  src: url("../fonts/Roboto/roboto-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/roboto-bold.woff2") format("woff2"), url("../fonts/Roboto/roboto-bold.woff") format("woff"), url("../fonts/Roboto/roboto-bold.ttf") format("truetype"), url("../fonts/Roboto/roboto-bold.svg#svgFontName") format("svg");
+  font-family: "Circe";
+  src: url("../fonts/Circe/Circe-ExtraLight.eot");
+  src: url("../fonts/Circe/Circe-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Circe/Circe-ExtraLight.woff2") format("woff2"), url("../fonts/Circe/Circe-ExtraLight.woff") format("woff"), url("../fonts/Circe/Circe-ExtraLight.ttf") format("truetype"), url("../fonts/Circe/Circe-ExtraLight.svg#svgFontName") format("svg");
   font-style: normal;
-  font-weight: normal; }
+  font-weight: 100; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -226,6 +226,7 @@ body {
     padding: 4px 0; }
 
 .main-news {
+  overflow: hidden;
   font-size: 17px; }
   .main-news__head {
     background-color: #006dba;
@@ -267,20 +268,69 @@ body {
     width: calc(100% - 324px); }
   .main-news__gallery-info {
     background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 10px 2em 20px;
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: 1; }
-  .main-news__gallery-img {
-    background-image: url("../img/news-img.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    .main-news__gallery-info:after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 100%;
+      top: 0;
+      height: 100%;
+      width: 50vw; }
+  .main-news__gallery-info-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    left: 0;
+    width: 100%; }
+  .main-news__gallery-container {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: calc(1040px - 324px - 30px + (100vw - 1040px) / 2); }
+  .main-news__gallery-item {
+    background-image: url("../img/news-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%; }
+  .main-news__bottom-line {
+    background-color: #006dba;
+    height: 1.8em; }
+
+.slick-list {
+  height: 100%; }
+
+.slick-track {
+  height: 100%; }
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.gallery__block {
+  padding: 0 30px; }
+
+.gallery__item {
+  padding: 10px; }
+
+.gallery__img {
+  background-color: #006dba;
+  height: 100px; }
 
 .icon {
   display: inline-block;
