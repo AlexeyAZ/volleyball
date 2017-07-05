@@ -102,15 +102,18 @@ body {
             align-items: flex-end;
     padding-right: 20px; }
   .header__search-field {
-    border: 1px solid #cecccd;
-    position: relative; }
+    position: relative;
+    height: 30px;
+    width: 260px; }
   .header__search-input {
-    border: none;
+    background-color: white;
+    border: 1px solid #cecccd;
     outline: none;
     font-size: 15px;
     line-height: 2;
     padding: 0 1.2em 0 22px;
-    min-width: 260px; }
+    height: 100%;
+    width: 100%; }
   .header__search-btn {
     background-color: transparent;
     border: none;
@@ -121,7 +124,8 @@ body {
     top: 0;
     right: 0;
     height: 100%;
-    width: 2em; }
+    width: 2em;
+    z-index: 2; }
     .header__search-btn:hover .header__search-img {
       fill: #cb2229; }
   .header__search-img {
