@@ -1,11 +1,44 @@
 .gallery {
 
     &__block {
-        padding: 0 30px;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    &__block-arrow {
+        transition: $trans;
+        transform: translateY(-50%);
+        cursor: pointer;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+        top: 50%;
+
+        &_left {
+            border-width: 13px 8px 13px 0;
+            border-color: transparent $blue-main transparent transparent;
+            left: 0;
+
+            &:hover {
+                border-width: 15px 10px 15px 0;
+            }
+        }
+
+        &_right {
+            border-width: 13px 0 13px 8px;
+            border-color: transparent transparent transparent $blue-main;
+            right: 0;
+
+            &:hover {
+                border-width: 15px 0 15px 10px;
+            }
+        }
     }
 
     &__imgs {
-
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     &__item {
@@ -14,6 +47,6 @@
 
     &__img {
         background-color: $blue-main;
-        height: 100px;
+        height: 58px;
     }
 }

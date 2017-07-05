@@ -56,9 +56,17 @@
 		right: 0;
 		height: 100%;
 		width: 2em;
+
+		&:hover {
+
+			.header__search-img {
+				fill: $red-main;
+			}
+		}
 	}
 
 	&__search-img {
+		transition: $trans;
 		fill: $blue-main-light;
 		height: 1.2em;
 		width: 1.2em;
@@ -86,7 +94,18 @@
 		padding-right: 5px;
 	}
 
+	&__social-link {
+
+		&:hover {
+
+			.header__social-img {
+				fill: $blue-main;
+			}
+		}
+	}
+
 	&__social-img {
+		transition: $trans;
 		height: 1em;
 		width: 1em;
 	}
@@ -98,7 +117,7 @@
 	&__nav {
 		font-size: 17px;
 		position: relative;
-		z-index: 2;
+		z-index: 10;
 	}
 
 	&__nav-list {
@@ -133,6 +152,7 @@
 		//transition: $header-nav-transition;
 		transform: translateX(-10px);
 		background-color: $gray-main;
+		font-size: 14px;
 		padding: 10px 0;
 		position: absolute;
 		opacity: 0;

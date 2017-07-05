@@ -1,9 +1,10 @@
 section.gallery
     div.container
         div.gallery__block
+            div.gallery__block-arrow.gallery__block-arrow_left.js-gallery-block-arrow-left
+            div.gallery__block-arrow.gallery__block-arrow_right.js-gallery-block-arrow-right
             div.gallery__imgs.js-gallery-imgs
                 - for(var i = 0; i < 10; i ++) {
                     div.gallery__item
-                        div.gallery__img.
-                            #{i}
+                        div.gallery__img
                 - }

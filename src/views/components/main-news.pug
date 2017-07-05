@@ -19,13 +19,19 @@ section.main-news
 								td.main-news__table-col.main-news__table-col_time.
 									0#{i}.03.2014
 								td.main-news__table-col.main-news__table-col_event
-									a(href="").main-news__table-link.
-										Кавалеры орденов
+									a(href="").main-news__table-link
+										img(src="img/nav-block-arrow.png", alt="").main-news__table-arrow
+										|Кавалеры орденов
 						-}
 				div.main-news__gallery
+					div.main-news__gallery-arrow.main-news__gallery-arrow_left.js-main-news-gallery-arrow-left
+					div.main-news__gallery-arrow.main-news__gallery-arrow_right.js-main-news-gallery-arrow-right
 					div.main-news__gallery-info
-						p.main-news__gallery-info-title.
-							Кто будет спонсором
+						p.main-news__gallery-info-title
+							a(href="").main-news__gallery-info-title-link.
+								Кто будет спонсором
+						a(href="").main-news__gallery-rubric.
+							Российский спорт
 						p.main-news__gallery-info-time.
 							04.03.2014
 						p.main-news__gallery-info-text.
@@ -33,8 +39,8 @@ section.main-news
 						div.main-news__gallery-info-bottom
 							div.nav-block__head.main-news__gallery-nav-block
 								img(src="img/nav-block-arrow.png", alt="").nav-block__arrow
-								a(href="").nav-block__link.
-									В центре внимания
+								a(href="").nav-block__link.main-news__gallery-nav-block-link.
+									Подробнее
 							div.main-news__gallery-dots.js-main-news-gallery-dots
 					div.main-news__gallery-container.js-main-news-gallery
 						div.main-news__gallery-item
