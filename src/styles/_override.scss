@@ -1,0 +1,30 @@
+.mCSB_scrollTools {
+
+	.mCSB_dragger {
+		
+		.mCSB_dragger_bar {
+			background-color: $gray-main-light;
+			border-radius: 0;
+			width: 5px;
+		}
+
+
+		&.mCSB_dragger_onDrag {
+
+			.mCSB_dragger_bar {
+				background-color: $gray-main-light;
+			}
+		}
+
+		&:hover {
+
+			.mCSB_dragger_bar {
+				background-color: $gray-main-light;
+			}
+		}
+	}
+
+	.mCSB_draggerRail {
+		background-color: transparent;
+	}
+}

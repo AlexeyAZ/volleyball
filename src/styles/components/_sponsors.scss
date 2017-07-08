@@ -1,0 +1,22 @@
+.sponsors {
+
+	&__head {
+		background-color: $red-main;
+		color: white;
+	}
+
+	&__list {
+		display: flex;
+		flex-flow: wrap;
+		padding: 20px 0;
+	}
+
+	&__list-item {
+		text-align: center;
+		width: calc(100% / 7);
+	}
+
+	&__list-img {
+		max-width: 90%;
+	}
+}

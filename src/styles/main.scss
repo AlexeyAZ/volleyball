@@ -3,8 +3,10 @@
 @import "mixins";
 @import "helpers";
 @import "typography";
+@import "override";
 
 @import "app";
+
 
 @import "components/nav-block";
 
@@ -14,5 +16,8 @@
 
 @import "components/main-news";
 @import "components/gallery";
+@import "components/press";
+@import "components/ads";
+@import "components/sponsors";
 
 @import "sprite";

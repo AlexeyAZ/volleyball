@@ -16,8 +16,12 @@ section.main-news
 					table.main-news__table
 						- for (var i = 1; i < 20; i++) {
 							tr.main-news__table-row
-								td.main-news__table-col.main-news__table-col_time.
-									0#{i}.03.2014
+								td.main-news__table-col.main-news__table-col_time
+									- if(i < 10) {
+										|0#{i}.03.2014
+									- } else {
+										|#{i}.03.2014
+									- }
 								td.main-news__table-col.main-news__table-col_event
 									a(href="").main-news__table-link
 										img(src="img/nav-block-arrow.png", alt="").main-news__table-arrow

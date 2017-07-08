@@ -1,0 +1,26 @@
+- var pressTable = ["Светлана Илич: Продолжим движение в выбранном направлении", "", "", ];
+
+div.press
+	div.nav-block
+		div.nav-block__head.nav-block__head_red.press__nav-block-head
+			div.nav-block__current.
+				Пресса
+			img(src="img/nav-block-arrow.png", alt="").nav-block__arrow
+			a(href="").nav-block__link.
+				Подробнее
+	div.press__list.js-press-list
+		table.press__table
+			- for(var i = 1; i < 20; i++) {
+				tr.press__table-row
+					td.press__table-col.press__table-col_time
+						span.press__table-col-time
+							- if(i < 10) {
+								|0#{i}.03.2014
+							- } else {
+								|#{i}.03.2014
+							- }
+						
+					td.press__table-col.press__table-col_event
+						a(href="").press__table-link.
+							Светлана Илич: Продолжим движение в выбранном направлении
+			- }

@@ -5,7 +5,6 @@
 
 	&__head {
 		background-color: $blue-main;
-		padding: 3px 0;
 	}
 
 	&__body {
@@ -57,7 +56,6 @@
 		}
 
 		&_event {
-			font-size: 14px;
 			padding-left: 8px;
 		}
 	}
@@ -147,7 +145,6 @@
 		transition: $trans;
 		background-color: rgba(255,255,255,0.3);
 		color: white;
-		font-size: 14px;
 		text-decoration: none;
 		padding: 2px 10px;
 		position: absolute;
@@ -161,10 +158,6 @@
 
 	&__gallery-info-time {
 		font-size: 12px;
-	}
-
-	&__gallery-info-text {
-		font-size: 14px;
 	}
 
 	&__gallery-info-bottom {
@@ -260,18 +253,4 @@
 }
 
 
-.mCSB_scrollTools {
 
-	.mCSB_dragger {
-		
-		.mCSB_dragger_bar {
-			background-color: $gray-main-light;
-			border-radius: 0;
-			width: 5px;
-		}
-	}
-
-	.mCSB_draggerRail {
-		background-color: transparent;
-	}
-}

@@ -10,4 +10,12 @@
 		padding-left: $container-inner-side-padding-pc;
 		padding-right: $container-inner-side-padding-pc;
 	}
+
+	&__row {
+		display: flex;
+	}
+
+	&__col {
+		width: 50%;
+	}
 }

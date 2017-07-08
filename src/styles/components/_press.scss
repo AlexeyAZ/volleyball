@@ -1,0 +1,51 @@
+.press {
+
+	&__nav-block-head {
+		margin-bottom: 35px;
+		padding-left: $container-inner-side-padding-pc;
+	}
+
+	&__list {
+		padding-left: $container-inner-side-padding-pc;
+		height: 200px;
+	}
+
+	&__table-row {
+
+		&:hover {
+			font-weight: bold;
+
+			.press__table-col_time {
+				font-size: 11px;
+			}
+
+			.press__table-col_event {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__table-col {
+		position: relative;
+		
+		
+		&_time {
+			font-size: 10px;
+			min-width: 60px;
+		}
+	}
+
+	&__table-col-wrap {
+		min-height: 30px;
+	}
+
+	&__table-link {
+		
+		color: $blue-link;
+	}
+
+	.mCSB_scrollTools .mCSB_draggerRail {
+		background-color: $gray-main-240;
+		width: 3px;
+	}
+}

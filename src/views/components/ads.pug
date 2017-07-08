@@ -1,0 +1,20 @@
+div.ads
+	div.ads__head
+		div.container
+			div.nav-block__head
+				div.nav-block__current.
+					Реклама
+	div.ads__body
+		div.container.ads__body-container
+			div.ads__main
+				img(src="img/ads-alfos.png", alt="").ads__main-img
+				p.
+					Alfos — Интернет-магазин товаров для спорта, отдыха и здоровья, обеспечение профессиональных спортивных клубов и спортивных федераций высококачественой продукцией 
+			div.ads__list
+				- for(var i = 0; i < 4; i ++) {
+					a(href="").ads__list-item
+						span.ads__list-circle
+							img(src="", alt="").ads__list-img
+						p.ads__list-title.
+							Бандажи и фиксаторы
+				- }

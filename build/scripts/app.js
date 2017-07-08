@@ -3,6 +3,7 @@
 $(function () {
 
     $(".js-main-news-list").mCustomScrollbar();
+    $(".js-press-list").mCustomScrollbar();
 
     $(".js-main-news-gallery").slick({
         //arrows: false,
