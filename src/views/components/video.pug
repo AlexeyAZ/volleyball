@@ -1,0 +1,36 @@
+div.video.video_main
+    div.nav-block__head.nav-block__head_gray.video__nav-block-head
+        div.nav-block__current.
+            Видео
+        div
+            img(src="img/nav-block-arrow.png", alt="").nav-block__arrow
+            a(href="").nav-block__link.
+                Остальное видео
+    div.video__body
+        div.video__frame
+            div.video__play-btn
+            //video.video__frame-src
+                source(src="movie.mp4" type="video/mp4")
+                source(src="movie.webm" type="video/webm")
+            img(src="img/news-img.jpg", alt="").video__img
+        a(href="").video__link.
+            Локомотив - Северсталь 1:3
+div.video.video_gallery
+    div.nav-block__head.nav-block__head_gray.video__nav-block-head
+        div
+            div.nav-block__current.
+                Анонсы трансляций
+            a(href="").video__live-link.
+                LIVE
+        div
+            img(src="img/nav-block-arrow.png", alt="").nav-block__arrow
+            a(href="").nav-block__link.
+                Трансляции
+    div.video__body
+        div.video__list
+            - for(var i = 0; i < 3; i++) {
+            div.video__list-item
+                img(src="img/news-img.jpg", alt="").video__img
+                a(href="").video__link.
+                    Локомотив - Северсталь 1:3
+            - } 

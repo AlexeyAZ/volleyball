@@ -1,0 +1,13 @@
+div.calendar
+    div.nav-block__head.nav-block__head_blue.calendar__nav-block-head
+        div.nav-block__current.
+            Календарь соревнований
+        img(src="img/nav-block-arrow.png", alt="").nav-block__arrow
+        a(href="").nav-block__link.
+            Подробнее
+        div.nav-block__open-arrow
+    div.calendar__list
+        - for(var i = 0; i < 3; i++) {
+            div.calendar__list-item
+                div.calendar__month.js-calendar-month
+        - }

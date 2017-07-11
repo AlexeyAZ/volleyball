@@ -7,6 +7,10 @@
 		background-color: $blue-main;
 	}
 
+	&__nav-block-head {
+		padding-left: 0;
+	}
+
 	&__body {
 		background-color: $gray-main;
 		color: white;
@@ -184,7 +188,7 @@
 		top: 0;
 		left: 0;
 		height: 100%;
-		width: calc(#{$container-max-width} - #{$main-new-list-width} - #{$container-side-padding-pc} + (100vw - #{$container-max-width}) / 2);
+		width: calc(#{$container-max-width} - #{$main-new-list-width} - 0px + (100vw - #{$container-max-width}) / 2);
 
 		&:before {
 			content: "";

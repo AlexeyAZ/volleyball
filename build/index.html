@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <!--meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")-->
     <title>Main</title>
     <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
     <link rel="stylesheet" href="styles/vendor.css">
@@ -57,7 +57,7 @@
       <div class="header__nav-wrap">
         <div class="container header__nav-container">
           <nav class="header__nav">
-            <ul class="header__nav-list">
+            <ul class="header__nav-list js-header-nav-list">
               <li class="header__nav-item"><a class="header__nav-link" href="">О федерации</a>
                 <ul class="header__nav-options header__nav-options_level1">
                   <li class="header__nav-options-item"><a class="header__nav-options-link" href="">Российские соревнования</a>
@@ -612,7 +612,7 @@
         <div class="container">
           <div class="container__inner">
             <div class="nav-block">
-              <div class="nav-block__head">
+              <div class="nav-block__head main-news__nav-block-head">
                 <div class="nav-block__current">В центре внимания</div><img class="nav-block__arrow" src="img/nav-block-arrow.png" alt=""><a class="nav-block__link" href="">Все новости</a>
               </div>
             </div>
@@ -791,6 +791,7 @@
               <div class="nav-block">
                 <div class="nav-block__head nav-block__head_red press__nav-block-head">
                   <div class="nav-block__current">Пресса</div><img class="nav-block__arrow" src="img/nav-block-arrow.png" alt=""><a class="nav-block__link" href="">Подробнее</a>
+                  <div class="nav-block__open-arrow"></div>
                 </div>
               </div>
               <div class="press__list js-press-list">
@@ -875,6 +876,354 @@
               </div>
             </div>
           </div>
+          <div class="container__col">
+            <div class="calendar">
+              <div class="nav-block__head nav-block__head_blue calendar__nav-block-head">
+                <div class="nav-block__current">Календарь соревнований</div><img class="nav-block__arrow" src="img/nav-block-arrow.png" alt=""><a class="nav-block__link" href="">Подробнее</a>
+                <div class="nav-block__open-arrow"></div>
+              </div>
+              <div class="calendar__list">
+                <div class="calendar__list-item">
+                  <div class="calendar__month js-calendar-month"></div>
+                </div>
+                <div class="calendar__list-item">
+                  <div class="calendar__month js-calendar-month"></div>
+                </div>
+                <div class="calendar__list-item">
+                  <div class="calendar__month js-calendar-month"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container__col">
+            <div class="news-block">
+              <div class="nav-block__head nav-block__head_blue nav-block__head_close news-block__nav-block-head">
+                <div class="nav-block__current">90 лет Российскому волейболу</div><img class="nav-block__arrow" src="img/nav-block-arrow.png" alt=""><a class="nav-block__link" href="">Подробнее</a>
+                <div class="nav-block__open-arrow"></div>
+              </div>
+            </div>
+            <div class="teams">
+              <div class="nav-block">
+                <div class="nav-block__head nav-block__head_blue teams__nav-block-head">
+                  <div class="nav-block__current">Положение команд</div>
+                  <div class="nav-block__open-arrow"></div>
+                </div>
+              </div>
+              <div class="teams__body">
+                <div class="teams__arrow teams__arrow_left js-teams-slider-arrow-left"></div>
+                <div class="teams__arrow teams__arrow_right js-teams-slider-arrow-right"></div>
+                <div class="teams__slider js-teams-slider">
+                  <div class="teams__slider-item">
+                    <div class="teams__control">
+                      <div class="teams__title">Чемпионат мира. Суперлига</div>
+                      <div class="teams__options">
+                        <label>Год
+                          <select class="teams__options-select js-teams-select">
+                            <option>2014</option>
+                            <option>2015</option>
+                          </select>
+                        </label>
+                        <label>Этап
+                          <select class="teams__options-select js-teams-select">
+                            <option>Play Off</option>
+                            <option>Play Off</option>
+                          </select>
+                        </label>
+                        <div class="teams__gender">
+                          <form class="teams__gender-form">
+                            <input class="teams__gender-radio" type="radio" value="men" id="teamsGenderMen1" name="teamsgender1" checked>
+                            <label class="teams__gender-label" for="teamsGenderMen1">Мужчины</label>
+                            <input class="teams__gender-radio" type="radio" value="women" id="teamsGenderWomen1" name="teamsgender1">
+                            <label class="teams__gender-label" for="teamsGenderWomen1">Женщины</label>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="teams__results">
+                      <table class="teams__table">
+                        <thead class="teams__table-head">
+                          <tr>
+                            <th class="teams__table-col teams__table-col_head teams__table-title" colspan="3">Финал</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="teams__table-col">Команда</td>
+                            <td class="teams__table-col ta-center">1-й матч</td>
+                            <td class="ta-right teams__table-col teams__table-col_score">Счет в серии</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Локомотив</span><span class="teams__table-brackets">Новосибирск</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results" rowspan="2">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Зенит-Казань</span><span class="teams__table-brackets">Казань</span></td>
+                            <td class="teams__table-col ta-center teams__table-col_results"><span class="teams__table-brackets">20:25, 20:25, 22:25</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="teams__table">
+                        <thead class="teams__table-head">
+                          <tr>
+                            <th class="teams__table-col teams__table-col_head teams__table-title" colspan="3">Финал</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="teams__table-col">Команда</td>
+                            <td class="teams__table-col ta-center">1-й матч</td>
+                            <td class="ta-right teams__table-col teams__table-col_score">Счет в серии</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Локомотив</span><span class="teams__table-brackets">Новосибирск</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results" rowspan="2">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Зенит-Казань</span><span class="teams__table-brackets">Казань</span></td>
+                            <td class="teams__table-col ta-center teams__table-col_results"><span class="teams__table-brackets">20:25, 20:25, 22:25</span></td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Локомотив</span><span class="teams__table-brackets">Новосибирск</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results" rowspan="2">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Зенит-Казань</span><span class="teams__table-brackets">Казань</span></td>
+                            <td class="teams__table-col ta-center teams__table-col_results"><span class="teams__table-brackets">20:25, 20:25, 22:25</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="teams__table">
+                        <thead class="teams__table-head">
+                          <tr>
+                            <th class="teams__table-col teams__table-col_head teams__table-title" colspan="7">Финал</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="teams__table-col">Команда</td>
+                            <td class="teams__table-col ta-center">1-й матч</td>
+                            <td class="teams__table-col ta-center">2-й матч</td>
+                            <td class="teams__table-col ta-center">3-й матч</td>
+                            <td class="teams__table-col ta-center">4-й матч</td>
+                            <td class="teams__table-col ta-center">5-й матч</td>
+                            <td class="ta-center teams__table-col teams__table-col_score">Счет в серии</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Динамо</span><span class="teams__table-brackets">Москва</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Динамо</span><span class="teams__table-brackets">Москва</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Динамо</span><span class="teams__table-brackets">Москва</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results">0: 1</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="teams__slider-item">
+                    <div class="teams__control">
+                      <div class="teams__title">Чемпионат мира. Суперлига</div>
+                      <div class="teams__options">
+                        <label>Год
+                          <select class="teams__options-select js-teams-select">
+                            <option>2014</option>
+                            <option>2015</option>
+                          </select>
+                        </label>
+                        <label>Этап
+                          <select class="teams__options-select js-teams-select">
+                            <option>Play Off</option>
+                            <option>Play Off</option>
+                          </select>
+                        </label>
+                        <div class="teams__gender">
+                          <form class="teams__gender-form">
+                            <input class="teams__gender-radio" type="radio" value="men" id="teamsGenderMen2" name="teamsgender2" checked>
+                            <label class="teams__gender-label" for="teamsGenderMen2">Мужчины</label>
+                            <input class="teams__gender-radio" type="radio" value="women" id="teamsGenderWomen2" name="teamsgender2">
+                            <label class="teams__gender-label" for="teamsGenderWomen2">Женщины</label>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="teams__results">
+                      <table class="teams__table">
+                        <thead class="teams__table-head">
+                          <tr>
+                            <th class="teams__table-col teams__table-col_head teams__table-title" colspan="3">Финал</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="teams__table-col">Команда</td>
+                            <td class="teams__table-col ta-center">1-й матч</td>
+                            <td class="ta-right teams__table-col teams__table-col_score">Счет в серии</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Локомотив</span><span class="teams__table-brackets">Новосибирск</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results" rowspan="2">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Зенит-Казань</span><span class="teams__table-brackets">Казань</span></td>
+                            <td class="teams__table-col ta-center teams__table-col_results"><span class="teams__table-brackets">20:25, 20:25, 22:25</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="teams__table">
+                        <thead class="teams__table-head">
+                          <tr>
+                            <th class="teams__table-col teams__table-col_head teams__table-title" colspan="3">Финал</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="teams__table-col">Команда</td>
+                            <td class="teams__table-col ta-center">1-й матч</td>
+                            <td class="ta-right teams__table-col teams__table-col_score">Счет в серии</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Локомотив</span><span class="teams__table-brackets">Новосибирск</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results" rowspan="2">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Зенит-Казань</span><span class="teams__table-brackets">Казань</span></td>
+                            <td class="teams__table-col ta-center teams__table-col_results"><span class="teams__table-brackets">20:25, 20:25, 22:25</span></td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Локомотив</span><span class="teams__table-brackets">Новосибирск</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results" rowspan="2">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Зенит-Казань</span><span class="teams__table-brackets">Казань</span></td>
+                            <td class="teams__table-col ta-center teams__table-col_results"><span class="teams__table-brackets">20:25, 20:25, 22:25</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table class="teams__table">
+                        <thead class="teams__table-head">
+                          <tr>
+                            <th class="teams__table-col teams__table-col_head teams__table-title" colspan="7">Финал</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="teams__table-col">Команда</td>
+                            <td class="teams__table-col ta-center">1-й матч</td>
+                            <td class="ta-right teams__table-col">2-й матч</td>
+                            <td class="teams__table-col ta-center">3-й матч</td>
+                            <td class="ta-right teams__table-col">4-й матч</td>
+                            <td class="ta-right teams__table-col">5-й матч</td>
+                            <td class="ta-right teams__table-col teams__table-col_score">Счет в серии</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Динамо</span><span class="teams__table-brackets">Москва</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Динамо</span><span class="teams__table-brackets">Москва</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results">0: 1</td>
+                          </tr>
+                          <tr>
+                            <td class="teams__table-col teams__table-col_results"><span class="fw-bold teams__table-title">Динамо</span><span class="teams__table-brackets">Москва</span></td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col fw-reg ta-center teams__table-col_results">0:3</td>
+                            <td class="teams__table-col teams__table-score teams__table-col_results">0: 1</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container__col">
+            <div class="video video_main">
+              <div class="nav-block__head nav-block__head_gray video__nav-block-head">
+                <div class="nav-block__current">Видео</div>
+                <div><img class="nav-block__arrow" src="img/nav-block-arrow.png" alt=""><a class="nav-block__link" href="">Остальное видео</a></div>
+              </div>
+              <div class="video__body">
+                <div class="video__frame">
+                  <div class="video__play-btn"></div>
+                  <!--video.video__frame-src
+                  source(src="movie.mp4" type="video/mp4")
+                  source(src="movie.webm" type="video/webm")
+                  --><img class="video__img" src="img/news-img.jpg" alt="">
+                </div><a class="video__link" href="">Локомотив — Северсталь 1:3</a>
+              </div>
+            </div>
+            <div class="video video_gallery">
+              <div class="nav-block__head nav-block__head_gray video__nav-block-head">
+                <div>
+                  <div class="nav-block__current">Анонсы трансляций</div><a class="video__live-link" href="">LIVE</a>
+                </div>
+                <div><img class="nav-block__arrow" src="img/nav-block-arrow.png" alt=""><a class="nav-block__link" href="">Трансляции</a></div>
+              </div>
+              <div class="video__body">
+                <div class="video__list">
+                  <div class="video__list-item"><img class="video__img" src="img/news-img.jpg" alt=""><a class="video__link" href="">Локомотив — Северсталь 1:3</a></div>
+                  <div class="video__list-item"><img class="video__img" src="img/news-img.jpg" alt=""><a class="video__link" href="">Локомотив — Северсталь 1:3</a></div>
+                  <div class="video__list-item"><img class="video__img" src="img/news-img.jpg" alt=""><a class="video__link" href="">Локомотив — Северсталь 1:3</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="partners">
+              <div class="nav-block__head nav-block__head_gray partners__nav-block-head">
+                <div class="nav-block__current">Партнеры</div>
+              </div>
+              <div class="partners__body">
+                <div class="partners__list">
+                  <div class="partners__list-item"><a class="partners__list-link" href=""><img class="partners__list-img" src="img/ads-alfos.png" alt=""></a></div>
+                  <div class="partners__list-item"><a class="partners__list-link" href=""><img class="partners__list-img" src="img/ads-alfos.png" alt=""></a></div>
+                  <div class="partners__list-item"><a class="partners__list-link" href=""><img class="partners__list-img" src="img/ads-alfos.png" alt=""></a></div>
+                  <div class="partners__list-item"><a class="partners__list-link" href=""><img class="partners__list-img" src="img/ads-alfos.png" alt=""></a></div>
+                  <div class="partners__list-item"><a class="partners__list-link" href=""><img class="partners__list-img" src="img/ads-alfos.png" alt=""></a></div>
+                  <div class="partners__list-item"><a class="partners__list-link" href=""><img class="partners__list-img" src="img/ads-alfos.png" alt=""></a></div>
+                  <div class="partners__list-item"><a class="partners__list-link" href=""><img class="partners__list-img" src="img/ads-alfos.png" alt=""></a></div>
+                  <div class="partners__list-item"><a class="partners__list-link" href=""><img class="partners__list-img" src="img/ads-alfos.png" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="ads">
@@ -929,7 +1278,33 @@
         </div>
       </div>
     </div>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="container__inner footer__top-container">
+            <div class="footer__top-item">
+              <p class="footer__top-adress">г. Москва, Лужнецкая наб., 8</p>
+              <div>тел. <a class="footer__link" href="tel:84956370000">+7 495 637-00-00,</a>
+                <a class="footer__link" href="tel:84956370971">637-09-71</a>
+              </div>
+            </div>
+            <div class="footer__top-item footer__top-item_right"><a class="footer__link" href="mailto:web@volley.ru">web@volley.ru</a>
+              <div class="nav-block__head footer__top-nav-block-head">
+                <div class="nav-block__current"><img class="nav-block__arrow" src="img/nav-block-arrow.png" alt=""><a class="nav-block__link footer__top-nav-block-link" href="">Контакты</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="container__inner footer__bottom-container">
+            <p>© 2001 — 2013 ООО «Всероссийская Федерация Волейбола»</p>
+            <p>Дизайн сайта</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="scripts/vendor.js"></script>
     <script src="scripts/app.js"></script>
   </body>

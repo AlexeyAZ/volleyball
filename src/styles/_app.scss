@@ -18,5 +18,6 @@ body {
     font-size: 14px;
     position: relative;
     line-height: 1.5;
-    min-width: 320px;
+    //min-width: 320px;
+    min-width: $container-max-width;
 }

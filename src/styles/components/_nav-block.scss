@@ -2,8 +2,10 @@
 	color: white;
 
 	&__head {
+		color: white;
 		font-size: 17px;
-		padding: 3px 0;
+		padding: 3px 20px;
+		position: relative;
 
 		&_blue {
 			background-color: $blue-main;
@@ -11,6 +13,17 @@
 
 		&_red {
 			background-color: $red-main;
+		}
+
+		&_gray {
+			background-color: $gray-main;
+		}
+
+		&_close {
+
+			.nav-block__open-arrow {
+				transform: translateY(-50%) scaleX(-1);
+			}
 		}
 	}
 
@@ -20,6 +33,20 @@
 
 	&__arrow {
 		margin: 0 8px;
+	}
+
+	&__open-arrow {
+		transition: $trans;
+		transform: translateY(-50%);
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		right: 18px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 7px 0 7px 6px;
+		border-color: transparent transparent transparent #ffffff;
 	}
 
 	&__link {

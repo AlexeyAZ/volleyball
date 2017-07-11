@@ -16,6 +16,8 @@
     "jquery": "^2.2.2",
     "reset-css": "^2.2.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
-    "slick-carousel": "^1.6.0"
+    "slick-carousel": "^1.6.0",
+    "air-datepicker": "^2.2.3",
+    "jquery.form-styler": "^2.0.0"
   }
 }

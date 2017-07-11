@@ -3,8 +3,8 @@
 	margin-right: auto;
 	padding-left: $container-side-padding-pc;
 	padding-right: $container-side-padding-pc;
-	max-width: $container-max-width;
-	min-width: $container-max-width;
+	width: $container-max-width;
+	//min-width: $container-max-width;
 
 	&__inner {
 		padding-left: $container-inner-side-padding-pc;
@@ -13,9 +13,19 @@
 
 	&__row {
 		display: flex;
+		flex-flow: wrap;
 	}
 
 	&__col {
+		margin-bottom: 25px;
 		width: 50%;
+
+		&:nth-child(odd) {
+			padding-right: $container-inner-side-padding-pc / 2;
+		}
+
+		&:nth-child(even) {
+			padding-left: $container-inner-side-padding-pc / 2;
+		}
 	}
 }

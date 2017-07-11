@@ -1,0 +1,136 @@
+.calendar {
+
+    &__nav-block-head {
+        color: white;
+        margin-bottom: 15px;
+        padding-left: $container-inner-side-padding-pc;
+    }
+
+    &__list {
+        display: flex;
+		padding-left: $container-inner-side-padding-pc;
+		padding-right: $container-inner-side-padding-pc;
+    }
+
+    &__list-item {
+        padding: 0 5px;
+        width: calc(100% / 3);
+    }
+
+    &__day {
+        border-radius: 4px;
+        color: white;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+
+        &_blue {
+            background-color: $blue-main;
+
+            &:hover {
+                background-color: $blue-main;
+            }
+        }
+
+        &_red {
+            background-color: $red-main;
+
+            &:hover {
+                background-color: $red-main;
+            }
+        }
+
+        &_bluered {
+            background-color: $red-main;
+
+            &:before {
+                content: "";
+                transform: rotate(45deg) translate(-75%, 0);
+                background-color: $blue-main;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 150%;
+                width: 150%;
+                z-index: -1;
+            }
+
+            &:hover {
+                background-color: $red-main;
+            }
+        }
+    }
+
+    &__day-event {
+        z-index: 2;
+    }
+
+    &__events {
+        background-color: $blue-main;
+        display: none;
+        border-radius: 4px;
+        color: white;
+        padding:  0 4px 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 92px;
+        z-index: 2;
+
+        &_show {
+            display: block;
+        }
+    }
+
+    &__events-event {
+
+        a {
+            color: white;
+        }
+    }
+
+    .datepicker-inline {
+        width: 100%;
+        
+        .datepicker {
+            font-size: 12px;
+            font-weight: normal;
+            border: none;
+            width: 100%;
+        }
+    }
+
+    .datepicker--nav {
+        border-bottom: none;
+    }
+
+    .datepicker--nav-action {
+        display: none;
+    }
+
+    .datepicker--nav-title {
+        pointer-events: none;
+        font-weight: bold;
+        font-size: 15px;
+
+        i {
+            display: none;
+        }
+    }
+
+    .datepicker--days-names {
+        border-bottom: 1px solid $gray-main-193;
+    }
+
+    .datepicker--day-name {
+        color: $gray-main-193;
+        text-transform: none;
+    }
+
+    .datepicker--cell {
+        position: relative;
+        height: 18px;
+    }
+}

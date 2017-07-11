@@ -143,6 +143,20 @@
 				visibility: visible;
 			}
 		}
+
+		&:nth-child(6),
+		&:nth-child(7),
+		&:nth-child(8) {
+
+			.header__nav-options {
+				left: auto;
+				right: 0;
+
+				.header__nav-options {
+					right: 100%;
+				}
+			}
+		}
 	}
 
 	&__nav-link {

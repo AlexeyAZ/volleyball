@@ -1,3 +1,54 @@
 .footer {
+    color: white;
 	
+    &__top {
+        background-color: $gray-main;
+        background-image: url("../img/footer-decor.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 35px 0 30px;
+    }
+
+    &__top-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__top-item {
+        
+        &_right {
+            text-align: right;
+        }
+    }
+
+    &__top-adress {
+        margin-bottom: 6px;
+    }
+
+    &__top-nav-block-head {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    &__top-nav-block-link {
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+    }
+
+    &__bottom {
+        background-color: $gray-main-dark;
+        padding: 20px 0 28px;
+        color: rgba(255,255,255,0.6);
+    }
+
+    &__bottom-container {
+        display: flex;
+        justify-content: space-between;
+    }
 }

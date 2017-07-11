@@ -1,0 +1,104 @@
+.video {
+    background-color: $gray-main;
+    margin-bottom: 25px;
+    padding: 0 26px 20px;
+
+    &_main {
+        background-image: url("../img/video-main-decor.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 4px;
+    }
+
+    &_gallery {
+        background-image: url("../img/video-main-decor.png");
+        background-position: center;
+        background-size: 100%;
+    }
+
+    &__nav-block-head {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        margin-bottom: 6px;
+        padding-top: 6px;
+        padding-left: 0;
+        padding-right: 0;
+
+        .nav-block__current {
+            font-size: 16px;
+        }
+
+        .nav-block__link {
+            font-size: 15px;
+        }
+    }
+
+    &__frame {
+        position: relative;
+    }
+
+    &__frame-src {
+        display: none;
+        width: 100%;
+    }
+
+    &__play-btn {
+        transition: $trans;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0,0,0,0.1);
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 76px;
+        width: 76px;
+
+        &:before {
+            transform: translate(-50%, -50%);
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 25px 0 25px 32px;
+            border-color: transparent transparent transparent #ffffff;
+        }
+
+        &:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+    }
+
+    &__img {
+        margin-bottom: 5px;
+        width: 100%
+    }
+
+    &__link {
+        color: white;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list-item {
+        width: calc(32%);
+    }
+
+    &__live-link {
+        background-color: $yellow-main;
+        border-radius: 4px;
+        padding: 2px 10px 0;
+        color: black;
+        font-weight: normal;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+}

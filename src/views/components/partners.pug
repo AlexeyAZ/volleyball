@@ -1,0 +1,11 @@
+div.partners
+    div.nav-block__head.nav-block__head_gray.partners__nav-block-head
+        div.nav-block__current.
+            Партнеры
+    div.partners__body
+        div.partners__list
+            - for(var i = 0; i < 8; i++) {
+                div.partners__list-item
+                    a(href="").partners__list-link
+                        img(src="img/ads-alfos.png", alt="").partners__list-img
+            - }
