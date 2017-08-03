@@ -1,0 +1,67 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'Новости';
+	- var year = 2018;
+	- var yearNumber = 4; 
+	- var months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+block content
+	div.news
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					Новости
+				span.
+					Все новости
+		div.container.container_main
+			+sidebar(true)
+			div.content
+				div.hor-calendar.js-slider-calendar.news__hor-calendar
+					- for (var j = 1; j <= yearNumber; j++) {
+						div(data-year=(year - 1)).hor-calendar__item
+							div.hor-calendar__year.
+								#{year = year - 1}
+							ul.hor-calendar__months
+								- for (var i = months.length - 1; i > -1; i--) {
+									li(data-month=i).hor-calendar__month
+										a(href="#news" + (j * (i + 1))).hor-calendar__month-link.
+											#{months[i]}
+								-}
+					-}
+				div.news__table.js-news-table
+					- for (var i = 0; i < (months.length) * yearNumber; i++) {
+						div(id="news" + i).news__table-item
+							div.news__table-date
+								div.
+									04.03.2014
+							div.news__table-body
+								a(href="").news__table-heading.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis arcu et ante consectetur, vitae aliquam ante ullamcorper.
+								p.fs-xs.
+									Pellentesque ut accumsan neque, eget cursus eros. Nullam vel rutrum neque, vitae vestibulum dolor. Mauris sem arcu, tristique quis elit vitae, cursus euismod enim. Mauris at turpis sed libero vestibulum interdum at non tellus. Phasellus sit amet metus eu sapien lacinia tempus nec aliquam neque. Suspendisse id finibus sem, nec convallis sem. Curabitur mattis tellus sit amet mi tristique mattis.
+					-}
+				div.news__nav
+					div.news__nav-item.news__nav-item_left
+						a(href="").news__nav-link.news__nav-link_prev.js-news-nav-prev
+							img(src="img/wide-arrow-black.png", alt="")
+							span.news__nav-link-month.
+								Август
+							|
+							|
+							span.news__nav-link-year.
+								2014
+					div.news__nav-item.news__nav-item_center
+						div.news__nav-current.js-news-nav-current.
+							Июль
+					div.news__nav-item.news__nav-item_right
+						a(href="").news__nav-link.news__nav-link_next.js-news-nav-next
+							span.news__nav-link-month.
+								Июнь
+							|
+							|
+							span.news__nav-link-year.
+								2014
+							
+							img(src="img/wide-arrow-black.png", alt="")

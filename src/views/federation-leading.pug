@@ -1,0 +1,43 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'О федерации - руководство';
+
+block content
+	div.federation
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					О федерации
+				span.
+					Руководство
+		div.container.container_main
+			+sidebar
+			div.content
+				h3.mb1.
+					Руководство
+				div.federation__leading-list
+					- for(var i = 0; i < 10; i++) {
+						div.federation__leading-list-item-wrap
+							div.federation__leading-list-item
+								img(src="img/federation-lead-img.png", alt="").federation__leading-list-img
+								a(href="").federation__leading-list-name.
+									шевченко станислав владимирович
+								p.
+									Президент всероссийской федерации воллейбола
+								div.federation__leading-list-contact
+									span.
+										Телефон/факс:
+									|
+									|
+									a(href="tel:6370000").federation__leading-list-phone.
+										637-00-00
+								div.federation__leading-list-contact
+									span.
+										факс:
+									|
+									|
+									a(href="tel:6370000").federation__leading-list-phone.
+										637-00-00
+					-}

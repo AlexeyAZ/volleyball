@@ -1,0 +1,22 @@
+.news-open {
+
+	&__photo-block {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		padding-right: 10px;
+	}
+
+	&__photo-wrap {
+		height: 140px;
+		width: 31.6%;
+	}
+
+	&__photo {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100%;
+	}
+}

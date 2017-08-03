@@ -1,0 +1,102 @@
+.big-cal {
+
+	&__day {
+		width: calc(100% / 7);
+
+		&_holiday {
+			color: $red-main-light;
+		}
+	}
+
+	&__head {
+		display: flex;
+	}
+
+	&__head-day {
+		font-size: 13px;
+	}
+
+	&__head-day-link {
+		text-align: left;
+		text-decoration: none;
+		padding-left: 14px;
+		padding-bottom: 10px;
+	}
+
+	&__body {
+		display: flex;
+		flex-flow: wrap;
+	}
+
+	&__body-cell {
+		border: 1px solid white;
+		height: 100px;
+
+		&_number {
+			background-color: $gray-main-244;
+		}
+
+		&:hover {
+
+			.big-cal__body-cell-inner {
+				border-color: $blue-main;
+			}
+		}
+	}
+
+	&__body-cell-inner {
+		border: 1px solid transparent;
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__body-cell-number {
+		pointer-events: none;
+		padding: 4px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__body-cell-events {
+		pointer-events: none;
+		color: $gray-main-107;
+		font-size: 13px;
+		padding: 4px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__body-cell-popup {
+		display: none;
+		background-color: $blue-main;
+		color: white;
+		padding: 4px 50px 26px 4px;
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		z-index: 10;
+		width: 200px;
+	}
+
+	&__body-cell-popup-head {
+		margin-bottom: 10px;
+	}
+
+	&__body-cell-popup-link-wrap {
+		margin-bottom: 10px;
+	}
+
+	&__body-cell-popup-link {
+		display: inline-block;
+		color: white;
+		line-height: 1;
+		font-size: 13px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

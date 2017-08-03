@@ -1,0 +1,45 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'О федерации - Студенческие соревнования';
+
+block content
+	div.federation
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					О федерации
+				a(href="").bread-crumbs__link.
+					Документы
+				span.
+					Студенческие соревнования
+		div.container.container_main
+			+sidebar(false)
+			div.content
+				h3.mb1.
+					Студенческие соревнования
+				div.federation__competition-table-wrap
+					table.main-table.federation__competition-table
+						- for (var i = 0; i < 10; i++) {
+							tr.main-table__row
+								td.main-table__col.federation__competition-table-col
+									a(href="")
+										img(src="img/doc-icon-pdf.png", alt="")
+								td.main-table__col.federation__competition-table-col
+									p.federation__competition-table-title.mb0.
+										Всероссийские соревнования по волейболу среди команд ВУЗов России 2014 года
+									div.federation__competition-doc-info
+										span.federation__competition-doc-time
+											span.
+												19.05.2014
+											|
+											|
+											span.
+												16:07
+										span.federation__competition-doc-size
+											span.
+												8
+											span.
+												Мб
+						-}

@@ -1,0 +1,20 @@
+.contacts {
+
+	&__col {
+		padding-bottom: 20px;
+
+		&:first-child {
+			min-width: 160px;
+		}
+	}
+
+	&__phone-link {
+		color: currentColor;
+		text-decoration: none;
+	}
+
+	&__map {
+		margin-bottom: 35px;
+		height: 260px;
+	}
+}

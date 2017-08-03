@@ -1,0 +1,81 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'О федерации - Контакты';
+
+block append head
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+
+block content
+	div.federation.contacts
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					О федерации
+				span.
+					Контакты
+		div.container.container_main
+			+sidebar(false)
+			div.content
+				h3.mb1.
+					Контакты
+				div.contacts
+					table.contacts__table
+						tr.contacts__row
+							td.contacts__col.
+								Адрес:
+							td.contacts__col.
+								119270, Москва, Лужнецкая наб., 8.
+						tr.contacts__row
+							td.contacts__col.
+								Телефоны:
+							td.contacts__col
+								div.contacts__phone
+									a(href="84956370073").contacts__phone-link.
+										+ 7 (495) 637-00-73
+									|
+									|(справочный),
+								div.contacts__phone
+									a(href="84956370971").contacts__phone-link.
+										+ 7 (495) 637-09-71.
+						tr.contacts__row
+							td.contacts__col.
+								Факс:
+							td.contacts__col
+								div.contacts__phone
+									a(href="84956370195").contacts__phone-link.
+										+ 7 (495) 637-01-95.
+						tr.contacts__row
+							td.contacts__col.
+								E-mail:
+							td.contacts__col
+								div.contacts__phone
+									a(href="info@volley.ru").
+										info@volley.ru
+									|
+									|(информация),
+								div.contacts__phone
+									a(href="web@volley.ru").
+										web@volley.ru
+									|
+									|(для приема замечаний по работе сайта)
+						tr.contacts__row
+							td.contacts__col.
+								Официальный сайт:
+							td.contacts__col
+								div.contacts__phone
+									a(href="http://www.volley.ru" target="_blank").
+										www.volley.ru
+					div#contactsMap.contacts__map
+					table.contacts__table
+						tr.contacts__row
+							td.contacts__col.
+								Банковские реквизиты:
+							td.contacts__col.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis arcu et ante consectetur, vitae aliquam ante ullamcorper. Pellentesque ut accumsan neque, eget cursus eros
+						tr.contacts__row
+							td.contacts__col.
+								Расчетный счет:
+							td.contacts__col.
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis arcu et ante consectetur, vitae aliquam ante ullamcorper. Pellentesque ut accumsan neque, eget cursus eros

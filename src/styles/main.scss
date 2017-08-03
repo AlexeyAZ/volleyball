@@ -1,7 +1,6 @@
 @import "fonts";
 @import "variables";
 @import "mixins";
-@import "helpers";
 @import "typography";
 @import "override";
 
@@ -10,10 +9,29 @@
 
 @import "components/nav-block";
 
+@import "components/content";
 @import "components/container";
 @import "components/header";
 @import "components/footer";
+@import "components/sidebar";
+@import "components/note-block";
+@import "components/card-gallery";
+@import "components/main-table";
+@import "components/btn";
+@import "components/big-cal";
 
+@import "components/news";
+@import "components/news-open";
+@import "components/federation";
+@import "components/contacts";
+@import "components/team";
+@import "components/page-sponsors";
+@import "components/player";
+@import "components/clubs";
+@import "components/page-calendar";
+
+@import "components/hor-calendar";
+@import "components/bread-crumbs";
 @import "components/main-news";
 @import "components/gallery";
 @import "components/press";
@@ -25,4 +43,5 @@
 @import "components/ads";
 @import "components/sponsors";
 
+@import "helpers";
 @import "sprite";

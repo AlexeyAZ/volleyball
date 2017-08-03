@@ -1,0 +1,38 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'Спонсоры';
+
+block content
+	div.page-sponsors
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					Спонсоры
+				span.
+					Наши спонсоры
+		div.container.container_main
+			+sidebar(true)
+			div.content
+				h3.mb1.
+					Спонсоры
+				div.card-gallery.page-sponsors__gallery
+					- for (var i = 0; i < 5; i++) {
+						div.card-gallery__item-wrap.page-sponsors__gallery-item-wrap
+							div.card-gallery__item.page-sponsors__gallery-item
+								a(href="").card-gallery__img-wrap.page-sponsors__gallery-img-wrap
+									img(src="img/sponsors-img.png", alt="").card-gallery__img.page-sponsors__gallery-img
+								div.page-sponsors__gallery-title.
+									ВТБ
+								div.
+									Генеральный спонсор мужской сборной команды России по волейболу.
+								div.
+									Контактная информация:
+								div.
+									тел: 8(800) 200-77-99;
+								div.
+									email: info@veb.ru
+								a(href="http://www.veb.ru").page-sponsors__gallery-link.
+									www.vtbrussia.com
+					-}

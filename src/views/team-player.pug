@@ -1,0 +1,82 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'Сборные - Игрок';
+
+block content
+	div.player
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					Сборные
+				a(href="").bread-crumbs__link.
+					Национальные
+				a(href="").bread-crumbs__link.
+					Мужская сборная России, мировая лига на 2012 г
+				span.
+					Игрок
+		div.container.container_main
+			+sidebar(true)
+			div.content
+				div.player__info
+					div.player__info-item
+						img(src="img/team-player-img.png", alt="").player__info-img
+					div.player__info-item.player__info-item_text
+						h3.player__info-heading.mb1
+							span.tt-uppercase.
+								соколов
+							<br>
+							span.
+								Александр
+						div.player__info-block.mb2
+							div.player__info-row
+								span.player__info-col.player__info-col_key.
+									Амплуа
+								span.player__info-col.
+									Либеро
+							div.player__info-row
+								span.player__info-col.player__info-col_key.
+									Год рождения
+								span.player__info-col.
+									1982
+							div.player__info-row
+								span.player__info-col.player__info-col_key.
+									Команда
+								span.player__info-col.
+									Ярославич (Ярославль)
+						h4.tt-uppercase.fw-bold.mb0.
+							дополнительная информация
+						div.player__info-block.mb2
+							div.player__info-row
+								span.player__info-col.player__info-col_key.
+									Рост
+								span.player__info-col.
+									192 см
+							div.player__info-row
+								span.player__info-col.player__info-col_key.
+									Гражданство
+								span.player__info-col.
+									Россия
+				div.note-block.mt0.player__note
+					div.note-block__item.note-block__item_blue.player__note-heading.
+						Карьера
+				table.main-table.player__table
+					- for (var i = 0; i < 10; i++) {
+						tr.main-table__row
+							td.main-table__col.player__table-col.
+								с 2000 по 2009 г.
+							td.main-table__col.player__table-col.
+								"Факел", Новый Уренгой
+					-}
+				div.note-block.mt0.player__note
+					div.note-block__item.note-block__item_blue.player__note-heading.
+						Достижения
+				table.main-table.player__table
+					- for (var i = 0; i < 10; i++) {
+						tr.main-table__row
+							td.main-table__col.player__table-col.
+								2009 г.
+							td.main-table__col.player__table-col.
+								"Факел", Новый Уренгой
+					-}

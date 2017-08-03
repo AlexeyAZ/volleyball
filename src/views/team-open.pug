@@ -1,0 +1,117 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'Сборные - Национальные';
+
+block content
+	div.team
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					Сборные
+				a(href="").bread-crumbs__link.
+					Национальные
+				span.
+					Мужская сборная России, мировая лига на 2012 г
+		div.container.container_main
+			+sidebar(true)
+			div.content
+				h3.mb1.
+					Мужская сборная России, мировая лига на 2012 г
+				div.container__row
+					div.container__col
+						img(src="img/team-open-main-img.png", alt="")
+					div.container__col
+						div.note-block.mb0.mt0
+							div.note-block__item.note-block__item_blue.team__note-block-head.
+								Тренерский состав
+						table.main-table.team__general-table
+							tr.main-table__row.team__general-table-row
+								td.main-table__col.team__general-table-col.
+									Фото
+								td.main-table__col.team__general-table-col.
+									ФИО тренера
+								td.main-table__col.team__general-table-col.
+							- for (var i = 0; i < 3; i++) {
+								tr.main-table__row.team__general-table-row
+									td.main-table__col.team__general-table-col
+										img(src="img/team-open-man-img.png", alt="").team__general-table-img
+									td.main-table__col.team__general-table-col.team__general-table-col_max
+										p.tt-uppercase.mb0.
+											алекно
+										p.mb0.
+											Владимир Николаевич
+									td.main-table__col.team__general-table-col.
+										Главный тренер
+							- }
+				div.note-block.mb0.mt0
+					div.note-block__item.note-block__item_blue.team__note-block-head.
+						Игроки
+				div.container__row
+					div.container__col
+						table.main-table.team__general-table
+							tr.main-table__row.team__general-table-row
+								td.main-table__col.team__general-table-col.team__general-table-col_number.
+									№
+								td.main-table__col.team__general-table-col.team__general-table-col_photo.
+									Фото
+								td.main-table__col.team__general-table-col.
+									ФИО Игрока
+								td.main-table__col.team__general-table-col.
+									Клуб
+							- for (var i = 1; i <= 24; i++) {
+								tr.main-table__row.team__general-table-row
+									td.main-table__col.team__general-table-col.team__general-table-col_number.
+										#{i}
+									td.main-table__col.team__general-table-col.team__general-table-col_photo
+										img(src="img/team-open-man-img.png", alt="").team__general-table-img
+									td.main-table__col.team__general-table-col
+										p.tt-uppercase.mb0.
+											алекно
+										p.mb0.
+											Владимир Николаевич
+									td.main-table__col.team__general-table-col.
+										Факел
+							- }
+					div.container__col
+						table.main-table.team__general-table
+							tr.main-table__row.team__general-table-row
+								td.main-table__col.team__general-table-col.team__general-table-col_number.
+									№
+								td.main-table__col.team__general-table-col.team__general-table-col_photo.
+									Фото
+								td.main-table__col.team__general-table-col.
+									ФИО Игрока
+								td.main-table__col.team__general-table-col.
+									Клуб
+							- for (var i = 1; i <= 25; i++) {
+								tr.main-table__row.team__general-table-row
+									td.main-table__col.team__general-table-col.team__general-table-col_number.
+										#{i}
+									td.main-table__col.team__general-table-col.team__general-table-col_photo
+										img(src="img/team-open-man-img.png", alt="").team__general-table-img
+									td.main-table__col.team__general-table-col
+										p.tt-uppercase.mb0.
+											алекно
+										p.mb0.
+											Владимир Николаевич
+									td.main-table__col.team__general-table-col.
+										Факел
+							- }
+				div.note-block.mb0.mt0
+					div.note-block__item.note-block__item_blue.team__note-block-head.team__note-block-head_stuff.
+						Штаб команды
+				table.main-table.team__general-table
+					tr.main-table__row.team__general-table-row
+						td.main-table__col.team__general-table-col.team__general-table-col_stuff.
+							Должность
+						td.main-table__col.team__general-table-col.team__general-table-col_stuff.
+							ФИО
+					- for (var i = 1; i <= 10; i++) {
+						tr.main-table__row.team__general-table-row
+							td.main-table__col.team__general-table-col.team__general-table-col_stuff.
+								Генеральный менеджер
+							td.main-table__col.team__general-table-col.team__general-table-col_stuff.
+								Станиславов Роман
+					- }

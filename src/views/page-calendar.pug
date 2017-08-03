@@ -1,0 +1,70 @@
+extends templates/layout
+
+block vars
+	- var title = 'Волейбол - Клубы';
+	- var year = 2018;
+	- var yearNumber = 4;
+
+block content
+	div.page-calendar
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					Соревнования
+				span.
+					Календарь соревнований
+		div.container.page-calendar__gallery-container
+			include components/gallery
+		div.container.container_main
+			+sidebar
+			div.content
+				div.page-calendar__head
+					h3.
+						Календарь соревнований
+					form.teams__gender-form
+						input(type="radio" value="men" id="teamsGenderMen1" name="teamsgender1" checked).teams__gender-radio
+						label(for="teamsGenderMen1").teams__gender-label.
+							Мужчины
+						input(type="radio" value="women" id="teamsGenderWomen1" name="teamsgender1").teams__gender-radio
+						label(for="teamsGenderWomen1").teams__gender-label.
+							Женщины
+				div.hor-calendar.js-slider-calendar.page-calendar__slider
+					- for (var j = 1; j <= yearNumber; j++) {
+						div(data-year=(year - 1)).hor-calendar__item
+							div.hor-calendar__year.
+								#{year = year - 1}
+							ul.hor-calendar__months
+								- for (var i = months.length - 1; i > -1; i--) {
+									li(data-month=i).hor-calendar__month.js-hor-calendar-month-page-cal
+										a(href="#news" + (j * (i + 1))).hor-calendar__month-link.js-hor-calendar-month-page-cal-link.
+											#{months[i]}
+								-}
+					-}
+				div.page-calendar__calendar-wrap
+					div.big-cal.js-calendar-big-cal
+						div.big-cal__head
+							each item, index in days
+								div(class=(index === 5 || index === 6) ? "big-cal__day_holiday" : "").big-cal__day.big-cal__head-day
+									div.big-cal__head-day-link.
+										#{item}
+						div.big-cal__body
+							div.big-cal__body-cell.big-cal__day
+							- for (var i = 1; i <= 31; i++) {
+								div(class=(i + 7 === 6 || i + 7 === 13 || i + 7 === 20 || i + 7 === 27 || i + 7 === 34 || i + 7 === 5 || i + 7 === 12 || i + 7 === 19 || i + 7 === 26 || i + 7 === 33) ? "big-cal__day_holiday" : "").big-cal__body-cell.big-cal__body-cell_number.big-cal__day.js-calendar-big-cell
+									div.big-cal__body-cell-inner
+										div.big-cal__body-cell-number.
+											#{i}
+										- if (i === 3 || i === 12 || i === 18) {
+											div.big-cal__body-cell-events.
+												+1
+										- }
+										div.big-cal__body-cell-popup
+											div.big-cal__body-cell-popup-head.
+												23 Июля 2014
+											div.big-cal__body-cell-popup-link-wrap
+												a(href="").big-cal__body-cell-popup-link.
+													Чемпионат России PlayOff за 5-ое место
+											div.big-cal__body-cell-popup-link-wrap
+												a(href="").big-cal__body-cell-popup-link.
+													Чемпионат России PlayOff за 5-ое место
+							- }

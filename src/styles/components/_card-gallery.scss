@@ -1,0 +1,55 @@
+.card-gallery {
+	display: flex;
+	flex-flow: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+
+	&__item-wrap {
+		display: block;
+		padding: 10px;
+		width: calc(100% / 3);
+	}
+
+	&__item {
+		transition: $trans;
+		background-color: $gray-main-240;
+		display: block;
+		line-height: 1.7;
+		padding: 24px 22px;
+
+		&:hover {
+			background-color: transparent;
+
+			.card-gallery__title {
+				font-weight: bold;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__img-wrap {
+		display: block;
+		margin: 0 auto 30px;
+		height: 142px;
+		width: 142px;
+	}
+
+	&__img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	&__body {
+		display: block;
+	}
+
+	&__title {
+		display: block;
+	}
+
+	&__text {
+		display: block;
+		text-decoration: none;
+		color: black;
+	}
+}

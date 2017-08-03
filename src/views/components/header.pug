@@ -1,15 +1,18 @@
 - var headerActionsList = ["home", "system", "mail"];
 - var headerSocialList = ["rss", "fb", "tw"];
-- var headerNavList = ["О федерации", "Новости", "Сборные", "Волейбол", "Пляжный волейбол", "Видео", "Медиа", "Спонсоры"];
+- var headerNavList = [["О федерации"], ["Новости", "news.html"], ["Сборные"], ["Волейбол"], ["Пляжный волейбол"], ["Видео"], ["Медиа"], ["Спонсоры"]];
 - var headerNavOptions = ["Российские соревнования", "Международные соревнования", "Игроки (индивидуальный рейтинг на 29.09.14)", "Клубы", "Судьи", "Переходы", "Чемпионат Студенческой Волейбольной Лиги России", "Документы"];
 - var headerNavSubOptions = ["2014 год", "2013 год", "2012 год", "2011 год"];
 
 header.header
 	div.container.header__container
 		div.header__item.header__item_left
-			img(src="img/header-logo.png", alt="Всероссийская федерация воллейбола").header__logo
+			a(href="index.html")
+				img(src="img/header-logo.png", alt="Всероссийская федерация воллейбола").header__logo
 		div.header__item.header__item_right
 			div.header__search
+				a(href="pages.html").
+					страницы
 				form.header__search-form
 					div.header__search-field
 						input(type="text" placeholder="Поиск по сайту").header__search-input
@@ -36,8 +39,8 @@ header.header
 				ul.header__nav-list.js-header-nav-list
 					each item, index in headerNavList
 						li.header__nav-item
-							a(href="").header__nav-link.
-								#{item}
+							a(href=item[1] || "").header__nav-link.
+								#{item[0]}
 							ul.header__nav-options.header__nav-options_level1
 								each item in headerNavOptions
 									li.header__nav-options-item

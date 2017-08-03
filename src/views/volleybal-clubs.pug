@@ -1,0 +1,43 @@
+extends templates/layout
+
+block vars
+	- var title = 'Волейбол - Клубы';
+
+block content
+	div.clubs
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					Сборные
+				a(href="").bread-crumbs__link.
+					Сборные
+				span.
+					Национальные
+		div.container.container_main
+			+sidebar(true)
+			div.content
+				h3.mb1.
+					Клубы
+				div.card-gallery.clubs__gallery
+					- for (var i = 0; i < 5; i++) {
+						div.card-gallery__item-wrap
+							div.card-gallery__item.clubs__gallery-item
+								span.card-gallery__img-wrap.clubs__gallery-img-wrap
+									img(src="img/clubs-img.png", alt="").card-gallery__img
+								div.clubs__gallery-heading.
+									"Локомотив" Новосибирск
+								div.clubs__gallery-text-block
+									div.
+										603110, Новосибирск, ул. Учительская, 61,
+									div.
+										тел: +7 (383) 272-78-21, 272-89-99, 241-40-11
+								div.clubs__gallery-text-block
+									div.
+										СКК "Север"
+									div.
+										Адрес зала: ул. Учительская, 61,
+									div.
+										тел: +7 (383) 272-78-21, 272-89-99, 241-40-11
+								a(href="").clubs__gallery-link.
+									www.lokovolley.ru
+					-}

@@ -12,6 +12,10 @@ const plugins = {
         'bower_components/slick-carousel/slick/slick.min.js',
         'bower_components/air-datepicker/dist/js/datepicker.min.js',
         'bower_components/jquery.form-styler/dist/jquery.formstyler.min.js',
+        // 'bower_components/moment/min/moment.min.js',
+        // 'bower_components/moment/locale/ru.js',
+        // 'bower_components/fullcalendar/dist/fullcalendar.min.js',
+        // 'bower_components/fullcalendar/dist/locale/ru.js',
     ],
     css: [
         'bower_components/reset-css/reset.css',
@@ -19,6 +23,7 @@ const plugins = {
         'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css',
         'bower_components/air-datepicker/dist/css/datepicker.min.css',
         'bower_components/jquery.form-styler/dist/jquery.formstyler.css',
+        //'bower_components/fullcalendar/dist/fullcalendar.min.css',
     ]
 }
 

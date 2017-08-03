@@ -1,0 +1,30 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'О федерации - История';
+
+block content
+	div.federation
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					О федерации
+				span.
+					История
+		div.container.container_main
+			+sidebar(false)
+			div.content
+				h3.mb1.
+					История
+				- for (var i = 0; i < 2; i++) {
+					div.federation__history-block
+						div.note-block.mb1
+							div.note-block__item.note-block__item_gray_dark.federation__history-note-block-head
+								div.fw-bold.ta-center.fs-l.
+									Из истории федерации волейбола СССР
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis arcu et ante consectetur, vitae aliquam ante ullamcorper. Pellentesque ut accumsan neque, eget cursus eros. Nullam vel rutrum neque, vitae vestibulum dolor. Mauris sem arcu, tristique quis elit vitae, cursus euismod enim. Mauris at turpis sed libero vestibulum interdum at non tellus. Phasellus sit amet metus eu sapien lacinia tempus nec aliquam neque. Suspendisse id finibus sem, nec convallis sem. Curabitur mattis tellus sit amet mi tristique mattis.
+						p.
+							Nam id dolor nec leo lacinia convallis nec sit amet ipsum. Donec consectetur dolor risus, in condimentum augue imperdiet sed. Aenean eros risus, tempus ut lacus a, porta sagittis eros. Curabitur tincidunt ex non neque lacinia hendrerit. Morbi sollicitudin, metus vitae tincidunt vehicula, lectus ex tincidunt justo, sit amet malesuada odio est varius risus. Nullam iaculis in nisl sed sagittis. Phasellus massa dui, imperdiet a orci quis, auctor placerat nisl. Aenean tempor aliquet lacus eget volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris ipsum neque, lacinia sed blandit nec, facilisis quis nunc. Sed vel libero at ex finibus placerat non sed arcu. Curabitur et risus ligula. Vestibulum eu justo sit amet libero posuere ultricies nec vel arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris at tincidunt est, at varius dui.
+				-}

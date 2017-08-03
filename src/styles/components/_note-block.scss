@@ -1,0 +1,28 @@
+.note-block {
+	margin: 20px 0;
+
+	&__item {
+		padding-top: 7px;
+		padding-bottom: 7px;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		&_body {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		&_gray_light {
+			background-color: $gray-main-241;
+		}
+
+		&_gray_dark {
+			background-color: $gray-main-225;
+		}
+
+		&_blue {
+			background-color: $blue-main;
+			color: white;
+		}
+	}
+}

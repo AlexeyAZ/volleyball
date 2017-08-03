@@ -1,0 +1,114 @@
+.page-calendar {
+
+	&__gallery-container {
+		margin-top: -10px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	&__slider {
+		margin-bottom: 30px;
+	}
+
+	&__calendar-wrap {
+		padding-right: 12px;
+	}
+
+	&__popup {
+		background-color: $blue-main;
+		color: white;
+		padding: 4px;
+		position: absolute;
+		z-index: 10;
+		width: 200px;
+
+		div {
+			text-transform: capitalize;
+		}
+
+		a {
+			color: white;
+			font-size: 12px;
+		}
+	}
+
+	// .fc-toolbar {
+	// 	display: none;
+	// }
+
+	// .fc-widget-content {
+	// 	border: none;
+	// }
+
+	// .fc-head-container,
+	// .fc-day-header {
+	// 	border: none;
+	// }
+
+	// .fc-head-container {
+	// 	font-size: 13px;
+	// }
+
+	// .fc-row {
+	// 	border: none;
+	// }
+
+	// .fc-day-header {
+	// 	text-align: left;
+	// 	padding-left: 14px;
+	// 	padding-bottom: 10px;
+	// }
+
+	// .fc-sat,
+	// .fc-sun {
+	// 	color: $red-main-light;
+	// }
+
+	// .fc-scroller {
+	// 	overflow: hidden !important;
+	// }
+
+	// .fc-day {
+	// 	background-color: $gray-main-244;
+	// 	border: 2px solid white;
+	// 	position: relative;
+
+	// 	// &:before {
+	// 	// 	content: "";
+	// 	// 	position: absolute;
+	// 	// 	top: 2px;
+	// 	// 	left: 2px;
+	// 	// 	height: calc(100% - 4px);
+	// 	// 	width: calc(100% - 4px);
+	// 	// }
+
+	// 	// &:hover {
+	// 	// 	border: 1px solid $blue-main;
+	// 	// }
+	// }
+
+	// .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+	// 	display: inline-block;
+	// 	float: left;
+	// 	padding: 4px 0 0 4px;
+	// }
+
+	// .fc-content-skeleton {
+	// 	//pointer-events: none;
+
+	// 	tbody {
+	// 		display: none;
+	// 	}
+	// }
+
+	// a.fc-more {
+
+	// }
+}

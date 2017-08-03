@@ -1,0 +1,62 @@
+.player {
+
+	&__info {
+		display: flex;
+	}
+
+	&__info-item {
+		
+		&_text {
+			padding-left: 30px;
+		}
+	}
+
+	&__info-img {
+		max-height: 232px;
+		max-width: 180px;
+	}
+
+	&__info-heading {
+		line-height: 1.2;
+	}
+
+	&__info-row {
+		line-height: 1.8;
+	}
+
+	&__info-col {
+
+		&_key {
+			margin-right: 5px;
+
+			&:after {
+				content: ":";
+			}
+		}
+	}
+
+	&__note {
+		margin-bottom: 6px;
+	}
+
+	&__note-heading {
+		padding: 5px 15px;
+	}
+
+	&__table {
+		margin-bottom: 30px;
+	}
+
+	&__table-col {
+		padding: 7px 15px;
+
+		&:first-child {
+			white-space: nowrap;
+			min-width: 135px;
+		}
+
+		&:last-child {
+			width: 100%;
+		}
+	}
+}

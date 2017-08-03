@@ -1,0 +1,37 @@
+.clubs {
+	font-size: 13px;
+
+	&__gallery {
+		text-align: center;
+	}
+
+	&__gallery-item {
+		padding: 24px 12px 12px;
+	}
+
+	&__gallery-img-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+		height: 94px;
+	}
+
+	&__gallery-heading {
+		font-size: 15px;
+		font-weight: bold;
+		color: $blue-main;
+	}
+
+	&__gallery-text-block {
+		margin-bottom: 24px;
+	}
+
+	&__gallery-link {
+		font-size: 15px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

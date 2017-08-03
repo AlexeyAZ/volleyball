@@ -1,0 +1,18 @@
+.main-table {
+	width: 100%;
+
+	&__row {
+
+		&:nth-child(odd) {
+			background-color: $gray-main-244;
+		}
+
+		&:nth-child(even) {
+			background-color: $gray-main-225;
+		}
+	}
+
+	&__col {
+		vertical-align: middle;
+	}
+}

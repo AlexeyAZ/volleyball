@@ -1,0 +1,12 @@
+﻿extends templates/layout
+
+block vars
+	- var pages = [["index.html", "Главная"],["news.html", "Новости"],["news-open.html", "Новости - подробнее"],["federation-leading.html", "О федерации - руководство"],["federation-ispolkom.html", "О федерации - Исполком"],["federation-staff.html", "О федерации - Аппарат"],["federation-associations.html", "О федерации - Ассоциации региональных федераций волейбола"],["federation-council.html", "О федерации - Наблюдательный совет"], ["federation-history.html", "О федерации - История"], ["federation-competition.html", "О федерации - Студенческие соревнования"],["federation-contacts.html", "О федерации - Контакты"],["team-national.html", "Сборные - Национальные"],["team-open.html", "Сборные - Команда"],["team-player.html", "Сборные - Игрок"],["volleybal-clubs.html", "Клубы"], ["page-calendar.html", "Календарь соревнований"],["sponsors.html", "Спонсоры"]];
+
+block content
+	div.container
+		ul(style="padding:50px 0;")
+			each item in pages
+				li(style="list-style-type:decimal")
+					a(href=item[0]).
+						#{item[1]}

@@ -1,0 +1,26 @@
+mixin sidebar(ads, open)
+	aside.sidebar
+		ul.sidebar__nav
+			- for (var i = 0; i < 10; i++) {
+				li.sidebar__nav-item
+					a(href="").sidebar__nav-link.js-sidebar-open-sub-nav
+						img(src="img/nav-block-arrow.png", alt="").sidebar__nav-arrow
+						|Все новости
+					ul.sidebar__nav.sidebar__nav_level_1
+						- for (var j = 0; j < 5; j++) {
+							li.sidebar__nav-item
+								a(href="").sidebar__nav-link
+									img(src="img/nav-block-arrow.png", alt="").sidebar__nav-arrow
+									|Все новости
+						-}
+			-}
+		- if (ads === true) {
+			div.sidebar__ads
+				div.nav-block
+					div.nav-block__head.nav-block__head_gray
+						div.nav-block__current.
+							Реклама
+				div.sidebar__ads-body
+					a(href="")
+						img(src="img/sidebar-ads-img.png", alt="").sidebar__ads-img
+		-}

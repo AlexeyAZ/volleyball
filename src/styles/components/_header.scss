@@ -4,6 +4,7 @@
 	background-size: auto 100%;
 	background-position: right 30% center;
 	background-repeat: no-repeat;
+	padding-top: 5px;
 
 	&__container {
 		display: flex;
@@ -135,12 +136,18 @@
 		position: relative;
 
 		&:hover {
+			transition: $header-nav-transition;
 			background-color: $gray-main;
 
 			> .header__nav-options {
+				transition: $header-nav-transition;
 				transform: translateX(0);
 				opacity: 1;
 				visibility: visible;
+
+				&:hover {
+					transition: none;
+				}
 			}
 		}
 
@@ -178,7 +185,7 @@
 		z-index: 1;
 
 		&_level1 {
-			transition: $header-nav-transition;
+			//transition: $header-nav-transition;
 			top: 100%;
 			left: 0;
 		}

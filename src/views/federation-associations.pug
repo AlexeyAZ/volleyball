@@ -1,0 +1,31 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'О федерации - Ассоциации региональных федераций волейбола';
+
+block content
+	div.federation
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					О федерации
+				a(href="").bread-crumbs__link.
+					Структура
+				span.
+					Ассоциации региональных федераций волейбола
+		div.container.container_main
+			+sidebar(false)
+			div.content
+				h3.mb1.
+					Региональные федерации волейбола
+				div.card-gallery
+					- for (var i = 0; i < 5; i++) {
+						div.card-gallery__item-wrap
+							a(href="").card-gallery__item
+								span.card-gallery__img-wrap
+									img(src="img/federation-association-img.png", alt="").card-gallery__img
+								span.card-gallery__body
+									span.card-gallery__title.
+										Ассоциация региональных федераций воллейбола Центра России
+					-}

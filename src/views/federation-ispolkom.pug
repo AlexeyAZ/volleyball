@@ -1,0 +1,36 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'О федерации - Исполком';
+
+block content
+	div.federation
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					О федерации
+				a(href="").bread-crumbs__link.
+					Структура
+				span.
+					Исполком
+		div.container.container_main
+			+sidebar(false)
+			div.content
+				h3.mb1.
+					Исполком
+				- for (var i = 0; i < 4; i++) {
+					div.note-block.mb2
+						div.note-block__item.note-block__item_gray_dark.
+							Президент ВФВ
+						div.note-block__item.note-block__item_gray_light.note-block__item_body
+							div.tt-uppercase.
+								шевченко станислав владимирович
+				-}
+
+				- for (var i = 0; i < 4; i++) {
+					div.note-block.mb2
+						div.note-block__item.note-block__item_gray_light.note-block__item_body
+							div.tt-uppercase.
+								шевченко станислав владимирович
+				- }

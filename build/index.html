@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <!--meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")-->
-    <title>Main</title>
+    <title>Главная</title>
     <link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
     <link rel="stylesheet" href="styles/vendor.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -13,9 +13,9 @@
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;"><symbol viewBox="0 0 191.42 409.6" id="header-fb-icon" xmlns="http://www.w3.org/2000/svg"><title>header-fb-icon</title><path d="M127.95 409.6H51.2V204.8H0v-70.58h51.2l-.08-41.58C51.12 35 66.73 0 134.55 0H191v70.59h-35.27c-26.41 0-27.68 9.86-27.68 28.27l-.11 35.33h63.48l-7.48 70.58H128zm0 0"/></symbol><symbol viewBox="0 0 72 72" id="header-rss-icon" xmlns="http://www.w3.org/2000/svg"><title>header-rss-icon</title><path d="M16.32 55.66a9.47 9.47 0 0 1 0 13.46 9.58 9.58 0 0 1-13.51 0 9.48 9.48 0 0 1 0-13.47 9.55 9.55 0 0 1 13.51 0zm0 0zM2.8 69.12zM0 24.48v13.75a33.53 33.53 0 0 1 23.82 9.9A33.61 33.61 0 0 1 33.7 72h13.81a47.41 47.41 0 0 0-13.94-33.57A47.34 47.34 0 0 0 0 24.48zM0 0v13.74A58.33 58.33 0 0 1 58.22 72H72a71.8 71.8 0 0 0-21.11-50.87A71.74 71.74 0 0 0 0 0zm0 0"/></symbol><symbol id="header-search-icon" viewBox="0 0 409.6 409.6" xmlns="http://www.w3.org/2000/svg"><defs><style>.ccls-1{fill:none}.ccls-2{clip-path:url(#cclip-path)}</style><clipPath id="cclip-path" transform="translate(-101 -191)"><path class="ccls-1" d="M101 191h409.92v410H101z"/></clipPath></defs><title>header-search-icon</title><path d="M408.2 344.6a153.6 153.6 0 1 0-153.6 153.6 153.6 153.6 0 0 0 153.6-153.6zM254.6 459.8a115.2 115.2 0 1 1 115.2-115.2 115.33 115.33 0 0 1-115.2 115.2zm244.75 75.25l-94-94a180.78 180.78 0 0 1-54.3 54.3l94 94a38.4 38.4 0 1 0 54.3-54.3zm0 0" transform="translate(-101 -191)" class="ccls-2"/></symbol><symbol viewBox="0 0 12.8 10.4" id="header-tw-icon" xmlns="http://www.w3.org/2000/svg"><title>header-tw-icon</title><path d="M12.8 1.23a5.25 5.25 0 0 1-1.51.42A2.65 2.65 0 0 0 12.45.19a5.23 5.23 0 0 1-1.67.64 2.63 2.63 0 0 0-4.54 1.8 2.73 2.73 0 0 0 .07.6A7.46 7.46 0 0 1 .89.48 2.63 2.63 0 0 0 1.7 4a2.59 2.59 0 0 1-1.18-.34 2.63 2.63 0 0 0 2.1 2.58 2.71 2.71 0 0 1-.69.09 2.65 2.65 0 0 1-.5 0 2.63 2.63 0 0 0 2.46 1.8A5.28 5.28 0 0 1 .62 9.25a5.63 5.63 0 0 1-.62 0 7.43 7.43 0 0 0 4 1.15 7.42 7.42 0 0 0 7.5-7.47v-.34a5.29 5.29 0 0 0 1.3-1.36zm0 0"/></symbol></svg>
     <header class="header">
       <div class="container header__container">
-        <div class="header__item header__item_left"><img class="header__logo" src="img/header-logo.png" alt="Всероссийская федерация воллейбола"></div>
+        <div class="header__item header__item_left"><a href="index.html"><img class="header__logo" src="img/header-logo.png" alt="Всероссийская федерация воллейбола"></a></div>
         <div class="header__item header__item_right">
-          <div class="header__search">
+          <div class="header__search"><a href="pages.html">страницы</a>
             <form class="header__search-form">
               <div class="header__search-field">
                 <input class="header__search-input" type="text" placeholder="Поиск по сайту">
@@ -126,7 +126,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="header__nav-item"><a class="header__nav-link" href="">Новости</a>
+              <li class="header__nav-item"><a class="header__nav-link" href="news.html">Новости</a>
                 <ul class="header__nav-options header__nav-options_level1">
                   <li class="header__nav-options-item"><a class="header__nav-options-link" href="">Российские соревнования</a>
                     <ul class="header__nav-options header__nav-options_level2">
@@ -750,34 +750,40 @@
           <div class="gallery__block-arrow gallery__block-arrow_right js-gallery-block-arrow-right"></div>
           <div class="gallery__imgs js-gallery-imgs">
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img1.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img2.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img3.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img4.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img5.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img6.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img1.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img2.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img3.png" alt=""></div>
             </div>
             <div class="gallery__item">
-              <div class="gallery__img"></div>
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img4.png" alt=""></div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img5.png" alt=""></div>
+            </div>
+            <div class="gallery__item">
+              <div class="gallery__img-wrap"><img class="gallery__img" src="img/main-league-img6.png" alt=""></div>
             </div>
           </div>
         </div>
@@ -918,13 +924,13 @@
                       <div class="teams__title">Чемпионат мира. Суперлига</div>
                       <div class="teams__options">
                         <label>Год
-                          <select class="teams__options-select js-teams-select">
+                          <select class="teams__options-select js-select">
                             <option>2014</option>
                             <option>2015</option>
                           </select>
                         </label>
                         <label>Этап
-                          <select class="teams__options-select js-teams-select">
+                          <select class="teams__options-select js-select">
                             <option>Play Off</option>
                             <option>Play Off</option>
                           </select>
@@ -1047,13 +1053,13 @@
                       <div class="teams__title">Чемпионат мира. Суперлига</div>
                       <div class="teams__options">
                         <label>Год
-                          <select class="teams__options-select js-teams-select">
+                          <select class="teams__options-select js-select">
                             <option>2014</option>
                             <option>2015</option>
                           </select>
                         </label>
                         <label>Этап
-                          <select class="teams__options-select js-teams-select">
+                          <select class="teams__options-select js-select">
                             <option>Play Off</option>
                             <option>Play Off</option>
                           </select>
@@ -1248,6 +1254,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <footer class="footer">
       <div class="sponsors">
         <div class="sponsors__head">
           <div class="container">
@@ -1277,8 +1285,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <footer class="footer">
       <div class="footer__top">
         <div class="container">
           <div class="container__inner footer__top-container">

@@ -1,0 +1,128 @@
+.federation {
+
+	/*** leading ***/
+
+	&__leading-list {
+		display: flex;
+		flex-flow: wrap;
+		margin-bottom: -14px;
+	}
+
+	&__leading-list-item-wrap {
+		margin-bottom: 46px;
+		width: calc(100% / 3);
+	}
+
+	&__leading-list-item {
+		line-height: 1.7;
+		width: 188px;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	&__leading-list-img {
+		margin-bottom: 10px;
+		width: 100%;
+	}
+
+	&__leading-list-name {
+		display: block;
+		font-size: 13px;
+		line-height: 1.8;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	&__leading-list-phone {
+		color: currentColor;
+		text-decoration: none;
+	}
+
+	/*** /leading ***/
+
+
+	/*** stuff ***/
+
+	&__note-block-section-heading {
+		margin-bottom: 6px;
+
+		+ .note-block {
+			margin-top: 0;
+		}
+	}
+
+	&__stuff-contacts {
+
+		span {
+
+			&:after {
+				content: ",";
+			}
+
+			&:last-child {
+
+				&:after {
+					content: none;
+				}
+			}
+
+			a {
+				color: currentColor;
+				text-decoration: none;
+			}
+		}
+	}
+
+	/*** /stuff ***/
+
+
+	/*** history ***/
+
+	&__history-block {
+		margin-bottom: 36px;
+
+		p {
+			line-height: 1.78;
+			padding: 0 20px;
+		}
+	}
+
+	&__history-note-block-head {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	/*** /history ***/
+
+
+	/*** competition ***/
+
+	&__competition-table {
+		color: $gray-main;
+	}
+
+	&__competition-table-col {
+		padding: 12px 8px;
+
+		&:first-child {
+			padding-left: 20px;
+			vertical-align: middle;
+		}
+	}
+
+	&__competition-doc-info {
+		font-size: 12px;
+	}
+
+	&__competition-doc-time {
+		margin-right: 6px;
+	}
+
+	&__competition-doc-size {
+		color: $gray-main-lightest;
+	}
+
+	/*** /competition ***/
+}

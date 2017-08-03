@@ -1,0 +1,81 @@
+.news {
+	
+	&__hor-calendar {
+		margin-bottom: 36px;
+	}
+
+	&__table {
+		margin-bottom: 20px;
+		max-height: 1000px;
+	}
+
+	&__table-item {
+		display: flex;
+		align-items: baseline;
+		margin-bottom: 16px;
+	}
+
+	&__table-date {
+		flex-shrink: 0;
+		font-size: 10px;
+		width: $news-table-width;
+	}
+
+	&__table-body {
+		flex-shrink: 1;
+	}
+
+	&__table-heading {
+
+		&:hover {
+			font-weight: bold;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav-item {
+		width: calc(100% / 3);
+
+		&_center {
+			text-align: center;
+		}
+
+		&_right {
+			text-align: right;
+		}
+	}
+
+	&__nav-link {
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&_prev {
+
+			img {
+				transform: scaleX(-1);
+				margin-right: 10px;
+			}
+		}
+
+		&_next {
+
+			img {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	&__nav-current {
+		background-color: $blue-main;
+		display: inline-block;
+		color: white;
+		padding: 2px 8px 2px 8px;
+	}
+}

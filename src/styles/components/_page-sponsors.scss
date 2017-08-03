@@ -1,0 +1,41 @@
+.page-sponsors {
+
+	&__gallery {
+		font-size: 14px;
+		text-align: center;
+	}
+
+	&__gallery-item-wrap {
+	}
+
+	&__gallery-item {
+		background-color: transparent;
+		line-height: 1.6;
+		padding-bottom: 26px;
+	}
+
+	&__gallery-img-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: auto auto 14px;
+		height: 92px;
+	}
+
+	&__gallery-title {
+		font-weight: bold;
+		color: $blue-main;
+	}
+
+	&__gallery-img {
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	&__gallery-link {
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,82 @@
+.team {
+
+	&__table-col {
+		padding: 5px 15px;
+		vertical-align: middle;
+
+		&:last-child {
+			text-align: right;
+		}
+	}
+
+	&__form {
+		margin-bottom: 16px;
+	}
+
+	&__select {
+		vertical-align: middle;
+		margin-left: 10px;
+	}
+
+	/*** team open ***/
+
+	&__note-block-head {
+		font-size: 16px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+
+		&_stuff {
+			padding-left: 12px;
+		}
+	}
+
+	&__general-table-row {
+
+		&:nth-child(even) {
+			background-color: $gray-main-244;
+		}
+
+		&:nth-child(odd) {
+			background-color: $gray-main-225;
+		}
+
+		&:first-child {
+			background-color: transparent;
+		}
+	}
+
+	&__general-table-col {
+		padding: 4px 12px;
+
+		&_number {
+			text-align: center;
+			padding-left: 4px;
+			padding-right: 8px;
+			white-space: nowrap;
+			width: 1px;
+		}
+
+		&_photo {
+			padding-left: 0;
+		}
+
+		&_stuff {
+			padding-top: 7px;
+			padding-bottom: 7px;
+		}
+
+		&_max {
+			width: 100%;
+		}
+
+		&:last-child(3) {
+			padding-right: 20px;
+		}
+	}
+
+	&__general-table-img {
+		display: block;
+	}
+
+	/*** /team open ***/
+}

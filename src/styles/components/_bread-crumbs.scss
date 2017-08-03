@@ -1,0 +1,17 @@
+.bread-crumbs {
+	font-size: 12px;
+	padding: 18px 0;
+
+	&__link {
+		background-image: url("../img/bread-crumbs-arrow.png");
+		background-position: right center;
+		background-repeat: no-repeat;
+		text-decoration: none;
+		margin-right: 3px;
+		padding-right: 15px;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

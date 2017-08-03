@@ -34,6 +34,10 @@
         }
     }
 
+    &__slider-item {
+        outline: none;
+    }
+
     &__title {
         font-size: 18px;
         font-weight: bold;
@@ -53,6 +57,7 @@
 
     &__gender-label {
         background-color: white;
+        cursor: pointer;
         display: inline-block;
         font-size: 15px;
         padding: 4px 20px;
@@ -125,54 +130,5 @@
         font-weight: normal;
         text-align: center;
         vertical-align: middle;
-    }
-
-    .jq-selectbox {
-
-        &__select {
-            border: 1px solid $gray-main-193;
-            padding: 4px 30px 3px 10px;
-        }
-        
-        &__trigger {
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 20px;
-        }
-
-        &__trigger-arrow {
-            transform: translate(-50%, -50%);
-            border-style: solid;
-            border-width: 4px 5px 0 5px;
-            border-color: $gray-main-193 transparent transparent transparent;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-        }
-
-        &__dropdown {
-            background-color: white;
-            border: 1px solid $gray-main-193;
-            border-top: none;
-            min-width: 100%;
-        }
-
-        li {
-            border-bottom: 1px solid $gray-main-193;
-            padding: 4px 5px 3px 10px;
-            cursor: pointer;
-
-            &:last-child {
-                border-bottom: none;
-            }
-
-            &:hover {
-                background-color: rgba(0,0,0,0.1);
-            }
-        }
     }
 }

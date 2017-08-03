@@ -1,0 +1,70 @@
+extends templates/layout
+
+block vars
+
+	- var title = 'О федерации - Аппарат';
+
+block content
+	div.federation
+		div.container
+			div.bread-crumbs
+				a(href="").bread-crumbs__link.
+					О федерации
+				a(href="").bread-crumbs__link.
+					Структура
+				span.
+					Аппарат
+		div.container.container_main
+			+sidebar(false)
+			div.content
+				h3.mb1.
+					Аппарат
+				div.note-block.mb2
+					div.note-block__item.note-block__item_gray_dark.
+						Президент ВФВ
+					div.note-block__item.note-block__item_gray_light.note-block__item_body
+						div.tt-uppercase.
+							шевченко станислав владимирович
+						div.federation__stuff-contacts
+							span
+								|тел:
+								|
+								|
+								a(href="tel:637-00-00").
+									6370000
+							|
+							|
+							span
+								|факс:
+								|
+								|
+								a(href="tel:637-00-00").
+									6370000
+				div.note-block.federation__note-block-section-heading
+					div.note-block__item.note-block__item_blue.
+						Директорат Всероссийских соревнований - Чемпионат и Кубок России по пляжному воллейболу
+				- for (var i = 0; i < 5; i++) {
+					div.note-block.mb2
+						div.note-block__item.note-block__item_gray_dark.
+							Руководитель
+						div.note-block__item.note-block__item_gray_light.note-block__item_body
+							div.tt-uppercase.
+								шевченко станислав владимирович
+							div.
+								Генеральный директор ВФВ
+							div.federation__stuff-contacts
+								span
+									|тел:
+									|
+									|
+									a(href="tel:637-00-00").
+										6370000
+								|
+								|
+								span
+									|факс:
+									|
+									|
+									a(href="tel:637-00-00").
+										6370000
+				- }

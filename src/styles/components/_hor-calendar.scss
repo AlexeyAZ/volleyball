@@ -1,0 +1,65 @@
+.hor-calendar {
+	white-space: nowrap;
+
+	&__item {
+		display: inline-flex;
+
+		&:first-child {
+
+			.hor-calendar__year {
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__year {
+		font-size: 16px;
+		font-weight: bold;
+		margin: 0 18px 0 10px;
+	}
+
+	&__months {
+		display: flex;
+	}
+
+	&__month {
+		list-style-type: none;
+
+		&_active {
+
+			.hor-calendar__month-link {
+				background-color: $blue-main;
+				color: white;
+			}
+		}
+	}
+
+	&__month-link {
+		transition: $trans;
+		display: block;
+		padding: 2px 8px 1px;
+		text-decoration: none;
+
+		&:hover {
+			background-color: $blue-main;
+			color: white;
+		}
+	}
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail {
+		background-color: $gray-main-241;
+		height: 3px;
+    	margin: 7px 0;
+	}
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar {
+		height: 5px;
+	}
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger {
+		width: 35px;
+	}
+
+	.mCSB_horizontal.mCSB_inside>.mCSB_container {
+		margin-bottom: 18px;
+	}
+}

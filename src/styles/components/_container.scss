@@ -6,6 +6,11 @@
 	width: $container-max-width;
 	//min-width: $container-max-width;
 
+	&_main {
+		display: flex;
+		padding-bottom: 46px;
+	}
+
 	&__inner {
 		padding-left: $container-inner-side-padding-pc;
 		padding-right: $container-inner-side-padding-pc;
