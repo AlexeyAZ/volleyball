@@ -31,7 +31,8 @@
 		display: inline-block;
 	}
 
-	&__arrow {
+	&__arrow.nav-block__arrow {
+		display: inline-block;
 		margin: 0 8px;
 	}
 

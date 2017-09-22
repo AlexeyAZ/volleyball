@@ -43,33 +43,11 @@
     }
 
     &__item {
-        outline: none;
         padding: 10px;
-
-        @for $i from 1 through 6 {
-            
-            &:nth-child(#{$i}n) {
-
-                .gallery__img-wrap {
-                    background-image: url("../img/main-league-lines#{$i}.png");
-                }
-            }
-        }
-    }
-
-    &__img-wrap {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: $blue-main;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 58px;
     }
 
     &__img {
-        max-width: 90%;
-        max-height: 90%;
+        background-color: $blue-main;
+        height: 58px;
     }
 }

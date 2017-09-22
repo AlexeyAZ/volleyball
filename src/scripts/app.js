@@ -338,103 +338,103 @@ $(function() {
     /*** calendar page ***/
     var dayOfWeek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
 
-    $('#calendar').fullCalendar({
-        locale: 'ru',
-        dayNamesShort: dayOfWeek,
-        dayNames: dayOfWeek,
-        contentHeight: 526,
-        showNonCurrentDates: false,
-        fixedWeekCount: false,
-        events: [
-            {
-                title  : 'event1',
-                start  : '2017-08-02'
-            },
-            {
-                title  : 'event2',
-                start  : '2017-08-02',
-            },
-            {
-                title  : 'event3',
-                start  : '2017-08-03',
-            },
-        ],
-        eventLimit: 1,
-        dayClick: function(date, jsEvent, view) {
-            console.log("dayClick")
+    // $('#calendar').fullCalendar({
+    //     locale: 'ru',
+    //     dayNamesShort: dayOfWeek,
+    //     dayNames: dayOfWeek,
+    //     contentHeight: 526,
+    //     showNonCurrentDates: false,
+    //     fixedWeekCount: false,
+    //     events: [
+    //         {
+    //             title  : 'event1',
+    //             start  : '2017-08-02'
+    //         },
+    //         {
+    //             title  : 'event2',
+    //             start  : '2017-08-02',
+    //         },
+    //         {
+    //             title  : 'event3',
+    //             start  : '2017-08-03',
+    //         },
+    //     ],
+    //     eventLimit: 1,
+    //     dayClick: function(date, jsEvent, view) {
+    //         console.log("dayClick")
             
-            var target = jsEvent.target;
-            var dayEvents = [];
+    //         var target = jsEvent.target;
+    //         var dayEvents = [];
 
-            $('#calendar').fullCalendar('clientEvents', function(event) {
+    //         $('#calendar').fullCalendar('clientEvents', function(event) {
 
-                if(moment(date).format('YYYY-MM-DD') == moment(event._start).format('YYYY-MM-DD')) {
-                    dayEvents.push(event);
-                }
-            });
+    //             if(moment(date).format('YYYY-MM-DD') == moment(event._start).format('YYYY-MM-DD')) {
+    //                 dayEvents.push(event);
+    //             }
+    //         });
             
-            console.log(dayEvents)
-            if (dayEvents.length) {
-                createEventsPopup(target, dayEvents);
-            } else {
-                createEventsPopup();
-            }
-        }
+    //         console.log(dayEvents)
+    //         if (dayEvents.length) {
+    //             createEventsPopup(target, dayEvents);
+    //         } else {
+    //             createEventsPopup();
+    //         }
+    //     }
 
-    });
+    // });
 
-    function createEventsPopup(elem, events) {
+    // function createEventsPopup(elem, events) {
 
-        if (elem) {
-            var coords = getCoords(elem);
-            removeElem();
+    //     if (elem) {
+    //         var coords = getCoords(elem);
+    //         removeElem();
 
-            var popup = document.createElement("div");
-            popup.classList.add("page-calendar__popup");
-            popup.style.position = "absolute";
-            popup.style.top = coords.top + "px";
-            popup.style.left = coords.left + "px";
+    //         var popup = document.createElement("div");
+    //         popup.classList.add("page-calendar__popup");
+    //         popup.style.position = "absolute";
+    //         popup.style.top = coords.top + "px";
+    //         popup.style.left = coords.left + "px";
 
-            var popupHead = document.createElement("div");
-            popupHead.innerText = moment(events[0].start._d).format('D MMMM YYYY');
-            popup.appendChild(popupHead);
+    //         var popupHead = document.createElement("div");
+    //         popupHead.innerText = moment(events[0].start._d).format('D MMMM YYYY');
+    //         popup.appendChild(popupHead);
 
-            var popupEvent = document.createElement("a");
-            popupEvent.innerText = "link";
-            popupEvent.setAttribute("href", "http://");
-            popup.appendChild(popupEvent);
-            document.body.appendChild(popup);
+    //         var popupEvent = document.createElement("a");
+    //         popupEvent.innerText = "link";
+    //         popupEvent.setAttribute("href", "http://");
+    //         popup.appendChild(popupEvent);
+    //         document.body.appendChild(popup);
 
-        } else {
-            removeElem();
-        }
+    //     } else {
+    //         removeElem();
+    //     }
 
-        function bodyClickHandler(e) {
-            console.log("bodyClick")
-            if (e.target.classList.contains("page-calendar__popup")) {
+    //     function bodyClickHandler(e) {
+    //         console.log("bodyClick")
+    //         if (e.target.classList.contains("page-calendar__popup")) {
                     
-            } else if (document.querySelector(".page-calendar__popup")) {
-                removeElem();
-                document.removeEventListener("click", bodyClickHandler);
-            }
-        }
+    //         } else if (document.querySelector(".page-calendar__popup")) {
+    //             removeElem();
+    //             document.removeEventListener("click", bodyClickHandler);
+    //         }
+    //     }
 
-        function removeElem() {
+    //     function removeElem() {
 
-            if (document.querySelector(".page-calendar__popup")) {
-                document.body.removeChild(document.querySelector(".page-calendar__popup"));
-            }
-        }
+    //         if (document.querySelector(".page-calendar__popup")) {
+    //             document.body.removeChild(document.querySelector(".page-calendar__popup"));
+    //         }
+    //     }
 
-        function getCoords(elem) {
-            var box = elem.getBoundingClientRect();
+    //     function getCoords(elem) {
+    //         var box = elem.getBoundingClientRect();
 
-            return {
-                top: box.top + pageYOffset,
-                left: box.left + pageXOffset
-            };
-        }
-    }
+    //         return {
+    //             top: box.top + pageYOffset,
+    //             left: box.left + pageXOffset
+    //         };
+    //     }
+    // }
 
     // $(".js-calendar-big-cell").on("click", function() {
     //     var self = $(this);

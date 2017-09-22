@@ -43,6 +43,10 @@
 	&__table-link {
 		
 		color: $blue-link;
+
+		a {
+			color: $blue-link;
+		}
 	}
 
 	.mCSB_scrollTools .mCSB_draggerRail {
